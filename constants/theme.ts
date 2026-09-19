@@ -19,7 +19,7 @@ export const colors = {
   chipActive: '#6B3F2A',
   chipActiveText: '#FFF8F2',
   link: '#2F5D8C',
-  shadow: 'rgba(28, 20, 16, 0.08)',
+  shadow: 'rgba(28, 20, 16, 0.06)',
 };
 
 export const spacing = {
@@ -39,10 +39,10 @@ export const radius = {
 };
 
 export const typography = {
-  hero: { fontSize: 28, fontWeight: '700' as const, letterSpacing: -0.5 },
-  title: { fontSize: 22, fontWeight: '700' as const, letterSpacing: -0.3 },
-  subtitle: { fontSize: 17, fontWeight: '600' as const },
-  body: { fontSize: 15, fontWeight: '400' as const, lineHeight: 22 },
+  hero: { fontSize: 26, fontWeight: '700' as const, letterSpacing: -0.4 },
+  title: { fontSize: 20, fontWeight: '700' as const, letterSpacing: -0.2 },
+  subtitle: { fontSize: 16, fontWeight: '600' as const, letterSpacing: -0.1 },
+  body: { fontSize: 15, fontWeight: '400' as const, lineHeight: 21 },
   caption: { fontSize: 13, fontWeight: '400' as const, lineHeight: 18 },
-  label: { fontSize: 12, fontWeight: '600' as const, letterSpacing: 0.2 },
+  label: { fontSize: 11, fontWeight: '600' as const, letterSpacing: 0.4 },
 };

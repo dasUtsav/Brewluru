@@ -21,10 +21,7 @@ const initialFilters: CafeFilters = {
 export default function WorkScreen() {
   const [filters, setFilters] = useState<CafeFilters>(initialFilters);
 
-  const results = useMemo(
-    () => filterCafes({ ...filters, workFriendly: true }),
-    [filters]
-  );
+  const results = useMemo(() => filterCafes({ ...filters, workFriendly: true }), [filters]);
 
   return (
     <FlatList
@@ -33,10 +30,8 @@ export default function WorkScreen() {
       contentContainerStyle={styles.content}
       ListHeaderComponent={
         <View style={styles.header}>
-          <Text style={styles.title}>Work-friendly cafes</Text>
-          <Text style={styles.subtitle}>
-            Preset: wifi or charging reported as yes. Many independents are still marked
-            unknown — absence from this list does not mean they are not laptop-friendly.
+          <Text style={styles.lede}>
+            Wifi or charging reported yes. Unknown amenities are omitted — confirm on-site.
           </Text>
           <FilterBar
             filters={{ ...filters, workFriendly: true }}
@@ -68,16 +63,16 @@ export default function WorkScreen() {
 
 const styles = StyleSheet.create({
   content: {
-    padding: spacing.lg,
+    paddingHorizontal: spacing.lg,
+    paddingTop: spacing.md,
     paddingBottom: spacing.xxl,
     maxWidth: 900,
     width: '100%',
     alignSelf: 'center',
   },
-  header: { gap: spacing.md, marginBottom: spacing.md },
-  title: { ...typography.title, color: colors.text },
-  subtitle: { ...typography.body, color: colors.textSecondary },
-  count: { ...typography.caption, color: colors.textMuted, fontWeight: '600' },
-  cardWrap: { marginBottom: spacing.md },
-  footer: { marginTop: spacing.lg },
+  header: { gap: spacing.sm, marginBottom: spacing.md },
+  lede: { ...typography.caption, color: colors.textSecondary },
+  count: { ...typography.caption, color: colors.textMuted },
+  cardWrap: { marginBottom: spacing.sm },
+  footer: { marginTop: spacing.md },
 });

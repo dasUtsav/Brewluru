@@ -11,37 +11,41 @@ type Props = {
 export function CafeCard({ cafe }: Props) {
   const { width } = useWindowDimensions();
   const wide = width >= 720;
+  const extraTags = Math.max(0, cafe.tags.length - 2);
+  const visibleTags = cafe.tags.slice(0, 2);
+  const hasKnownAmenity = cafe.wifi !== 'unknown' || cafe.charging !== 'unknown';
 
   return (
     <Link href={`/cafe/${cafe.id}`} asChild>
       <Pressable
-        style={({ pressed }) => [styles.card, wide && styles.cardWide, pressed && styles.pressed]}
+        style={({ pressed }) => [pressed && styles.pressed]}
         accessibilityRole="link"
         accessibilityLabel={`${cafe.name}, ${cafe.neighborhood}`}
       >
-        <View style={styles.header}>
-          <Text style={styles.name} numberOfLines={2}>
-            {cafe.name}
-          </Text>
-          {cafe.priceRange ? (
-            <Text style={styles.price} numberOfLines={1}>
-              {cafe.priceRange.split('(')[0].trim()}
-            </Text>
-          ) : null}
-        </View>
-        <Text style={styles.neighborhood}>{cafe.neighborhood}</Text>
-        <Text style={styles.description} numberOfLines={2}>
+        <View style={[styles.card, wide && styles.cardWide]}>
+        <Text style={styles.name} numberOfLines={1}>
+          {cafe.name}
+        </Text>
+        <Text style={styles.meta} numberOfLines={1}>
+          {cafe.neighborhood}
+          {cafe.priceRange ? `  ·  ${cafe.priceRange.split('(')[0].trim()}` : ''}
+        </Text>
+        <Text style={styles.description} numberOfLines={1}>
           {cafe.description}
         </Text>
-        <View style={styles.chips}>
-          <AmenityChip label="Wifi" status={cafe.wifi} compact />
-          <AmenityChip label="Charging" status={cafe.charging} compact />
-        </View>
-        {cafe.tags.length > 0 ? (
-          <Text style={styles.tags} numberOfLines={1}>
-            {cafe.tags.slice(0, 4).join(' · ')}
-          </Text>
+        {hasKnownAmenity || visibleTags.length > 0 ? (
+          <View style={styles.chips}>
+            <AmenityChip label="Wifi" status={cafe.wifi} compact hideUnknown />
+            <AmenityChip label="Charging" status={cafe.charging} compact hideUnknown />
+            {visibleTags.map((tag) => (
+              <Text key={tag} style={styles.tag} numberOfLines={1}>
+                {tag}
+              </Text>
+            ))}
+            {extraTags > 0 ? <Text style={styles.more}>+{extraTags}</Text> : null}
+          </View>
         ) : null}
+        </View>
       </Pressable>
     </Link>
   );
@@ -50,64 +54,53 @@ export function CafeCard({ cafe }: Props) {
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.bgElevated,
-    borderRadius: radius.lg,
-    padding: spacing.lg,
+    borderRadius: radius.md,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.md,
     borderWidth: 1,
     borderColor: colors.border,
-    gap: spacing.sm,
-    shadowColor: colors.shadow,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 1,
-    shadowRadius: 8,
-    elevation: 2,
+    gap: 4,
   },
   cardWide: {
     flex: 1,
-    minWidth: 280,
+    minWidth: 260,
     maxWidth: '100%',
   },
   pressed: {
     opacity: 0.92,
-    transform: [{ scale: 0.995 }],
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    gap: spacing.sm,
   },
   name: {
     ...typography.subtitle,
     color: colors.text,
-    flex: 1,
   },
-  price: {
-    ...typography.caption,
-    color: colors.accent,
-    fontWeight: '600',
-    maxWidth: 120,
-    textAlign: 'right',
-  },
-  neighborhood: {
-    ...typography.caption,
+  meta: {
+    ...typography.label,
     color: colors.textMuted,
-    fontWeight: '600',
     textTransform: 'uppercase',
-    letterSpacing: 0.4,
   },
   description: {
-    ...typography.body,
+    ...typography.caption,
     color: colors.textSecondary,
   },
   chips: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: spacing.sm,
-    marginTop: spacing.xs,
+    alignItems: 'center',
+    gap: 6,
+    marginTop: 4,
   },
-  tags: {
-    ...typography.caption,
+  tag: {
+    ...typography.label,
     color: colors.textMuted,
-    marginTop: 2,
+    backgroundColor: colors.bgMuted,
+    paddingHorizontal: 7,
+    paddingVertical: 2,
+    borderRadius: radius.pill,
+    maxWidth: 140,
+    overflow: 'hidden',
+  },
+  more: {
+    ...typography.label,
+    color: colors.textMuted,
   },
 });

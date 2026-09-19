@@ -5,12 +5,13 @@ type Props = {
   label: string;
   active?: boolean;
   onPress?: () => void;
+  compact?: boolean;
 };
 
-export function TagChip({ label, active, onPress }: Props) {
+export function TagChip({ label, active, onPress, compact }: Props) {
   const content = (
-    <View style={[styles.chip, active && styles.active]}>
-      <Text style={[styles.text, active && styles.activeText]} numberOfLines={1}>
+    <View style={[styles.chip, compact && styles.compact, active && styles.active]}>
+      <Text style={[styles.text, compact && styles.textCompact, active && styles.activeText]} numberOfLines={1}>
         {label}
       </Text>
     </View>
@@ -27,12 +28,16 @@ export function TagChip({ label, active, onPress }: Props) {
 
 const styles = StyleSheet.create({
   chip: {
-    paddingHorizontal: 12,
-    paddingVertical: 7,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
     borderRadius: radius.pill,
     backgroundColor: colors.chip,
     borderWidth: 1,
     borderColor: 'transparent',
+  },
+  compact: {
+    paddingHorizontal: 8,
+    paddingVertical: 3,
   },
   active: {
     backgroundColor: colors.chipActive,
@@ -41,6 +46,10 @@ const styles = StyleSheet.create({
   text: {
     ...typography.label,
     color: colors.textSecondary,
+    letterSpacing: 0.15,
+  },
+  textCompact: {
+    fontSize: 11,
   },
   activeText: {
     color: colors.chipActiveText,

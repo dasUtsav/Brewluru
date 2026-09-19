@@ -1,4 +1,14 @@
-import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { useMemo, useState } from 'react';
+import {
+  Modal,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  useWindowDimensions,
+} from 'react-native';
 import type { CafeFilters, PriceBand } from '@/types/cafe';
 import { getFilterTags, getNeighborhoods, getPriceBands } from '@/data/cafes';
 import { TagChip } from './TagChip';
@@ -11,18 +21,49 @@ type Props = {
 };
 
 export function FilterBar({ filters, onChange, showWorkToggle = true }: Props) {
+  const [sheetOpen, setSheetOpen] = useState(false);
   const neighborhoods = getNeighborhoods();
   const tags = getFilterTags();
   const bands = getPriceBands();
+  const { width } = useWindowDimensions();
+  const wide = width >= 720;
 
   const set = (partial: Partial<CafeFilters>) => onChange({ ...filters, ...partial });
+
+  const sheetCount = (filters.neighborhood ? 1 : 0) + (filters.tag ? 1 : 0);
+
+  const canClear = useMemo(
+    () =>
+      Boolean(
+        filters.query ||
+          filters.neighborhood ||
+          filters.tag ||
+          filters.wifiYes ||
+          filters.chargingYes ||
+          filters.priceBand ||
+          (showWorkToggle && filters.workFriendly)
+      ),
+    [filters, showWorkToggle]
+  );
+
+  const clearAll = () =>
+    onChange({
+      ...filters,
+      query: '',
+      neighborhood: null,
+      tag: null,
+      wifiYes: false,
+      chargingYes: false,
+      priceBand: null,
+      workFriendly: showWorkToggle ? false : filters.workFriendly,
+    });
 
   return (
     <View style={styles.wrap}>
       <TextInput
         value={filters.query}
         onChangeText={(query) => set({ query })}
-        placeholder="Search cafes, beans, neighborhoods…"
+        placeholder="Search cafes…"
         placeholderTextColor={colors.textMuted}
         style={styles.search}
         autoCorrect={false}
@@ -31,39 +72,22 @@ export function FilterBar({ filters, onChange, showWorkToggle = true }: Props) {
         accessibilityLabel="Search cafes"
       />
 
-      <Text style={styles.section}>Neighborhood</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.row}>
         <TagChip
-          label="All areas"
-          active={!filters.neighborhood}
-          onPress={() => set({ neighborhood: null })}
+          label={sheetCount > 0 ? `More · ${sheetCount}` : 'Area & tags'}
+          active={sheetCount > 0}
+          onPress={() => setSheetOpen(true)}
         />
-        {neighborhoods.map((n) => (
-          <TagChip
-            key={n}
-            label={shortNeighborhood(n)}
-            active={filters.neighborhood === n}
-            onPress={() => set({ neighborhood: filters.neighborhood === n ? null : n })}
-          />
-        ))}
-      </ScrollView>
-
-      <Text style={styles.section}>Amenities & price</Text>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.row}>
         {showWorkToggle ? (
           <TagChip
-            label="Work-friendly"
+            label="Work"
             active={filters.workFriendly}
             onPress={() => set({ workFriendly: !filters.workFriendly })}
           />
         ) : null}
+        <TagChip label="Wifi" active={filters.wifiYes} onPress={() => set({ wifiYes: !filters.wifiYes })} />
         <TagChip
-          label="Wifi yes"
-          active={filters.wifiYes}
-          onPress={() => set({ wifiYes: !filters.wifiYes })}
-        />
-        <TagChip
-          label="Charging yes"
+          label="Charging"
           active={filters.chargingYes}
           onPress={() => set({ chargingYes: !filters.chargingYes })}
         />
@@ -77,18 +101,88 @@ export function FilterBar({ filters, onChange, showWorkToggle = true }: Props) {
         ))}
       </ScrollView>
 
-      <Text style={styles.section}>Tags</Text>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.row}>
-        <TagChip label="Any tag" active={!filters.tag} onPress={() => set({ tag: null })} />
-        {tags.map((tag) => (
-          <TagChip
-            key={tag}
-            label={tag}
-            active={filters.tag === tag}
-            onPress={() => set({ tag: filters.tag === tag ? null : tag })}
+      {filters.neighborhood || filters.tag || canClear ? (
+        <View style={styles.activeRow}>
+          {filters.neighborhood ? (
+            <TagChip
+              compact
+              label={shortNeighborhood(filters.neighborhood)}
+              active
+              onPress={() => set({ neighborhood: null })}
+            />
+          ) : null}
+          {filters.tag ? (
+            <TagChip compact label={filters.tag} active onPress={() => set({ tag: null })} />
+          ) : null}
+          {canClear ? (
+            <Pressable onPress={clearAll} accessibilityRole="button" accessibilityLabel="Clear filters">
+              <Text style={styles.clear}>Clear</Text>
+            </Pressable>
+          ) : null}
+        </View>
+      ) : null}
+
+      <Modal
+        visible={sheetOpen}
+        animationType="none"
+        transparent
+        onRequestClose={() => setSheetOpen(false)}
+      >
+        <View style={styles.modalRoot}>
+          <Pressable
+            style={styles.backdropFlex}
+            onPress={() => setSheetOpen(false)}
+            accessibilityRole="button"
+            accessibilityLabel="Close filters"
           />
-        ))}
-      </ScrollView>
+          <View style={[styles.sheet, wide && styles.sheetWide]}>
+            <View style={styles.sheetHeader}>
+              <Text style={styles.sheetTitle}>Filters</Text>
+              <Pressable
+                onPress={() => setSheetOpen(false)}
+                accessibilityRole="button"
+                accessibilityLabel="Done"
+                hitSlop={12}
+              >
+                <Text style={styles.done}>Done</Text>
+              </Pressable>
+            </View>
+            <ScrollView contentContainerStyle={styles.sheetBody}>
+              <Text style={[styles.section, styles.sectionFirst]}>Neighborhood</Text>
+              <View style={styles.wrapChips}>
+                <TagChip
+                  compact
+                  label="All"
+                  active={!filters.neighborhood}
+                  onPress={() => set({ neighborhood: null })}
+                />
+                {neighborhoods.map((n) => (
+                  <TagChip
+                    key={n}
+                    compact
+                    label={shortNeighborhood(n)}
+                    active={filters.neighborhood === n}
+                    onPress={() => set({ neighborhood: filters.neighborhood === n ? null : n })}
+                  />
+                ))}
+              </View>
+              <Text style={styles.section}>Tags</Text>
+              <View style={styles.wrapChips}>
+                <TagChip compact label="Any" active={!filters.tag} onPress={() => set({ tag: null })} />
+                {tags.map((tag) => (
+                  <TagChip
+                    key={tag}
+                    compact
+                    label={tag}
+                    active={filters.tag === tag}
+                    onPress={() => set({ tag: filters.tag === tag ? null : tag })}
+                  />
+                ))}
+              </View>
+            </ScrollView>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -105,20 +199,85 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.border,
     borderRadius: radius.md,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: 12,
+    paddingHorizontal: spacing.md,
+    paddingVertical: 10,
     ...typography.body,
     color: colors.text,
-  },
-  section: {
-    ...typography.label,
-    color: colors.textMuted,
-    marginTop: spacing.sm,
-    textTransform: 'uppercase',
   },
   row: {
     gap: spacing.sm,
     paddingVertical: 2,
     paddingRight: spacing.lg,
+    alignItems: 'center',
+  },
+  activeRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    gap: spacing.sm,
+  },
+  clear: {
+    ...typography.label,
+    color: colors.accent,
+    textTransform: 'uppercase',
+  },
+  section: {
+    ...typography.label,
+    color: colors.textMuted,
+    textTransform: 'uppercase',
+    marginBottom: spacing.sm,
+    marginTop: spacing.lg,
+  },
+  sectionFirst: {
+    marginTop: spacing.sm,
+  },
+  modalRoot: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    backgroundColor: 'rgba(28, 20, 16, 0.4)',
+  },
+  backdropFlex: {
+    flex: 1,
+    alignSelf: 'stretch',
+  },
+  sheet: {
+    backgroundColor: colors.bgElevated,
+    borderTopLeftRadius: radius.lg,
+    borderTopRightRadius: radius.lg,
+    maxHeight: '80%',
+    width: '100%',
+    paddingBottom: spacing.xl,
+  },
+  sheetWide: {
+    maxWidth: 560,
+    width: '92%',
+    borderRadius: radius.lg,
+    marginBottom: 48,
+    maxHeight: '75%',
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  sheetHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: spacing.lg,
+    paddingTop: spacing.lg,
+    paddingBottom: spacing.sm,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+  },
+  sheetTitle: { ...typography.subtitle, color: colors.text },
+  done: { ...typography.label, color: colors.accent, textTransform: 'uppercase' },
+  sheetBody: {
+    paddingHorizontal: spacing.lg,
+    paddingBottom: spacing.xl,
+    paddingTop: spacing.sm,
+  },
+  wrapChips: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: spacing.sm,
   },
 });
