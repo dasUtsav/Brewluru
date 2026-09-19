@@ -8,6 +8,7 @@ export default function Root({ children }: PropsWithChildren) {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="color-scheme" content="light dark" />
         <title>Brewluru — Bangalore cafe guide</title>
         <meta
           name="description"
@@ -24,5 +25,10 @@ export default function Root({ children }: PropsWithChildren) {
 const responsiveBackground = `
 body {
   background-color: #F7F3EE;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #14100E;
+  }
 }
 `;

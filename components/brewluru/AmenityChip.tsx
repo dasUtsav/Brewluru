@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import type { AmenityStatus } from '@/types/cafe';
-import { colors, radius, typography } from '@/constants/theme';
+import { radius, typography } from '@/constants/theme';
+import { useThemedStyles } from '@/hooks/useThemeColors';
 
 type Props = {
   label: string;
@@ -11,6 +12,28 @@ type Props = {
 };
 
 export function AmenityChip({ label, status, compact, hideUnknown }: Props) {
+  const styles = useThemedStyles((colors) =>
+    StyleSheet.create({
+      chip: {
+        paddingHorizontal: 8,
+        paddingVertical: 4,
+        borderRadius: radius.pill,
+        alignSelf: 'flex-start',
+      },
+      compact: {
+        paddingHorizontal: 7,
+        paddingVertical: 2,
+      },
+      yes: { backgroundColor: colors.successSoft },
+      no: { backgroundColor: colors.dangerSoft },
+      unknown: { backgroundColor: colors.bgMuted },
+      label: { ...typography.label, letterSpacing: 0.2 },
+      yesText: { color: colors.success },
+      noText: { color: colors.danger },
+      unknownText: { color: colors.textMuted },
+    })
+  );
+
   if (hideUnknown && status === 'unknown') return null;
 
   const tone =
@@ -31,23 +54,3 @@ export function AmenityChip({ label, status, compact, hideUnknown }: Props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  chip: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: radius.pill,
-    alignSelf: 'flex-start',
-  },
-  compact: {
-    paddingHorizontal: 7,
-    paddingVertical: 2,
-  },
-  yes: { backgroundColor: colors.successSoft },
-  no: { backgroundColor: colors.dangerSoft },
-  unknown: { backgroundColor: colors.bgMuted },
-  label: { ...typography.label, letterSpacing: 0.2 },
-  yesText: { color: colors.success },
-  noText: { color: colors.danger },
-  unknownText: { color: colors.textMuted },
-});
