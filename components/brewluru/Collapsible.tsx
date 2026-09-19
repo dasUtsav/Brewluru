@@ -19,6 +19,7 @@ export function Collapsible({ title, children, defaultOpen = false }: Props) {
         style={styles.header}
         accessibilityRole="button"
         accessibilityState={{ expanded: open }}
+        accessibilityLabel={title}
       >
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.chevron}>{open ? '▾' : '▸'}</Text>

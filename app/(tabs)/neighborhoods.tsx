@@ -25,11 +25,17 @@ export default function NeighborhoodsScreen() {
           href={{ pathname: '/neighborhood/[name]', params: { name: toNeighborhoodParam(item.name) } }}
           asChild
         >
-          <Pressable style={({ pressed }) => [styles.row, pressed && styles.pressed]}>
-            <Text style={styles.name}>{item.name}</Text>
-            <Text style={styles.count}>
-              {item.count}
-            </Text>
+          <Pressable
+            style={({ pressed }) => [pressed && styles.pressed]}
+            accessibilityRole="link"
+            accessibilityLabel={`${item.name}, ${item.count} cafes`}
+          >
+            <View style={styles.row}>
+              <Text style={styles.name}>{item.name}</Text>
+              <Text style={styles.count}>
+                {item.count} cafe{item.count === 1 ? '' : 's'}
+              </Text>
+            </View>
           </Pressable>
         </Link>
       )}

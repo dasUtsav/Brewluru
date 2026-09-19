@@ -18,22 +18,17 @@ export function CafeCard({ cafe }: Props) {
   return (
     <Link href={`/cafe/${cafe.id}`} asChild>
       <Pressable
-        style={({ pressed }) => [styles.card, wide && styles.cardWide, pressed && styles.pressed]}
+        style={({ pressed }) => [pressed && styles.pressed]}
         accessibilityRole="link"
         accessibilityLabel={`${cafe.name}, ${cafe.neighborhood}`}
       >
-        <View style={styles.header}>
-          <Text style={styles.name} numberOfLines={1}>
-            {cafe.name}
-          </Text>
-          {cafe.priceRange ? (
-            <Text style={styles.price} numberOfLines={1}>
-              {cafe.priceRange.split('(')[0].trim()}
-            </Text>
-          ) : null}
-        </View>
+        <View style={[styles.card, wide && styles.cardWide]}>
+        <Text style={styles.name} numberOfLines={1}>
+          {cafe.name}
+        </Text>
         <Text style={styles.meta} numberOfLines={1}>
           {cafe.neighborhood}
+          {cafe.priceRange ? `  ·  ${cafe.priceRange.split('(')[0].trim()}` : ''}
         </Text>
         <Text style={styles.description} numberOfLines={1}>
           {cafe.description}
@@ -50,6 +45,7 @@ export function CafeCard({ cafe }: Props) {
             {extraTags > 0 ? <Text style={styles.more}>+{extraTags}</Text> : null}
           </View>
         ) : null}
+        </View>
       </Pressable>
     </Link>
   );
@@ -73,22 +69,9 @@ const styles = StyleSheet.create({
   pressed: {
     opacity: 0.92,
   },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'baseline',
-    gap: spacing.sm,
-  },
   name: {
     ...typography.subtitle,
     color: colors.text,
-    flex: 1,
-  },
-  price: {
-    ...typography.caption,
-    color: colors.accent,
-    fontWeight: '600',
-    flexShrink: 0,
   },
   meta: {
     ...typography.label,

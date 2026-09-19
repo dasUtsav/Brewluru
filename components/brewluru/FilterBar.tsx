@@ -124,13 +124,13 @@ export function FilterBar({ filters, onChange, showWorkToggle = true }: Props) {
 
       <Modal
         visible={sheetOpen}
-        animationType="fade"
+        animationType="none"
         transparent
         onRequestClose={() => setSheetOpen(false)}
       >
         <View style={styles.modalRoot}>
           <Pressable
-            style={styles.backdrop}
+            style={styles.backdropFlex}
             onPress={() => setSheetOpen(false)}
             accessibilityRole="button"
             accessibilityLabel="Close filters"
@@ -138,7 +138,12 @@ export function FilterBar({ filters, onChange, showWorkToggle = true }: Props) {
           <View style={[styles.sheet, wide && styles.sheetWide]}>
             <View style={styles.sheetHeader}>
               <Text style={styles.sheetTitle}>Filters</Text>
-              <Pressable onPress={() => setSheetOpen(false)} accessibilityRole="button">
+              <Pressable
+                onPress={() => setSheetOpen(false)}
+                accessibilityRole="button"
+                accessibilityLabel="Done"
+                hitSlop={12}
+              >
                 <Text style={styles.done}>Done</Text>
               </Pressable>
             </View>
@@ -230,29 +235,28 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
+    backgroundColor: 'rgba(28, 20, 16, 0.4)',
   },
-  backdrop: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    backgroundColor: 'rgba(28, 20, 16, 0.35)',
+  backdropFlex: {
+    flex: 1,
+    alignSelf: 'stretch',
   },
   sheet: {
-    backgroundColor: colors.bg,
+    backgroundColor: colors.bgElevated,
     borderTopLeftRadius: radius.lg,
     borderTopRightRadius: radius.lg,
     maxHeight: '80%',
     width: '100%',
     paddingBottom: spacing.xl,
-    zIndex: 2,
   },
   sheetWide: {
     maxWidth: 560,
+    width: '92%',
     borderRadius: radius.lg,
-    marginBottom: spacing.xl,
-    maxHeight: '70%',
+    marginBottom: 48,
+    maxHeight: '75%',
+    borderWidth: 1,
+    borderColor: colors.border,
   },
   sheetHeader: {
     flexDirection: 'row',

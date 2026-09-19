@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
   brand: { ...typography.hero, color: colors.accentStrong },
   tagline: { ...typography.caption, color: colors.textSecondary, marginTop: -4 },
   count: { ...typography.caption, color: colors.textMuted },
-  row: { gap: spacing.sm },
-  cardWrap: { marginBottom: spacing.sm },
+  row: { gap: spacing.md },
+  cardWrap: { marginBottom: spacing.md },
   cardWrapMulti: { flex: 1 },
   footer: { marginTop: spacing.md },
 });
