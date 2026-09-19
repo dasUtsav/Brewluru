@@ -1,4 +1,29 @@
-export const colors = {
+export type ThemeColors = {
+  bg: string;
+  bgElevated: string;
+  bgMuted: string;
+  text: string;
+  textSecondary: string;
+  textMuted: string;
+  border: string;
+  accent: string;
+  accentSoft: string;
+  accentStrong: string;
+  success: string;
+  successSoft: string;
+  warning: string;
+  warningSoft: string;
+  danger: string;
+  dangerSoft: string;
+  chip: string;
+  chipActive: string;
+  chipActiveText: string;
+  link: string;
+  shadow: string;
+  overlay: string;
+};
+
+export const lightColors: ThemeColors = {
   bg: '#F7F3EE',
   bgElevated: '#FFFFFF',
   bgMuted: '#EFE8DF',
@@ -20,7 +45,37 @@ export const colors = {
   chipActiveText: '#FFF8F2',
   link: '#2F5D8C',
   shadow: 'rgba(28, 20, 16, 0.06)',
+  overlay: 'rgba(28, 20, 16, 0.4)',
 };
+
+/** Warm espresso palette for dark mode */
+export const darkColors: ThemeColors = {
+  bg: '#14100E',
+  bgElevated: '#1E1814',
+  bgMuted: '#2A221C',
+  text: '#F5EDE6',
+  textSecondary: '#C4B5A8',
+  textMuted: '#8E7D70',
+  border: '#3A302A',
+  accent: '#D4A574',
+  accentSoft: '#3D2E22',
+  accentStrong: '#E8C9A8',
+  success: '#6BB896',
+  successSoft: '#1E2E26',
+  warning: '#D4A84A',
+  warningSoft: '#2E2618',
+  danger: '#E08A7A',
+  dangerSoft: '#2E1E1A',
+  chip: '#2A221C',
+  chipActive: '#D4A574',
+  chipActiveText: '#1A120C',
+  link: '#7EB3E0',
+  shadow: 'rgba(0, 0, 0, 0.35)',
+  overlay: 'rgba(0, 0, 0, 0.55)',
+};
+
+/** @deprecated Use useThemeColors() for theme-aware UI */
+export const colors = lightColors;
 
 export const spacing = {
   xs: 4,

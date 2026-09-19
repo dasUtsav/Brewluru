@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react';
 import { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { colors, spacing, typography } from '@/constants/theme';
+import { spacing, typography } from '@/constants/theme';
+import { useThemedStyles } from '@/hooks/useThemeColors';
 
 type Props = {
   title: string;
@@ -11,6 +12,36 @@ type Props = {
 
 export function Collapsible({ title, children, defaultOpen = false }: Props) {
   const [open, setOpen] = useState(defaultOpen);
+
+  const styles = useThemedStyles((colors) =>
+    StyleSheet.create({
+      wrap: {
+        borderTopWidth: 1,
+        borderTopColor: colors.border,
+        paddingTop: spacing.md,
+        marginTop: spacing.sm,
+      },
+      header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingVertical: spacing.xs,
+      },
+      title: {
+        ...typography.label,
+        color: colors.textMuted,
+        textTransform: 'uppercase',
+      },
+      chevron: {
+        color: colors.textMuted,
+        fontSize: 12,
+      },
+      body: {
+        gap: spacing.sm,
+        paddingTop: spacing.sm,
+      },
+    })
+  );
 
   return (
     <View style={styles.wrap}>
@@ -28,31 +59,3 @@ export function Collapsible({ title, children, defaultOpen = false }: Props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  wrap: {
-    borderTopWidth: 1,
-    borderTopColor: colors.border,
-    paddingTop: spacing.md,
-    marginTop: spacing.sm,
-  },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingVertical: spacing.xs,
-  },
-  title: {
-    ...typography.label,
-    color: colors.textMuted,
-    textTransform: 'uppercase',
-  },
-  chevron: {
-    color: colors.textMuted,
-    fontSize: 12,
-  },
-  body: {
-    gap: spacing.sm,
-    paddingTop: spacing.sm,
-  },
-});

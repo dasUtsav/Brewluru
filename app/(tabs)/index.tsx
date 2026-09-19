@@ -6,7 +6,8 @@ import { EmptyState } from '@/components/brewluru/EmptyState';
 import { FilterBar } from '@/components/brewluru/FilterBar';
 import { cafes, filterCafes } from '@/data/cafes';
 import type { CafeFilters } from '@/types/cafe';
-import { colors, spacing, typography } from '@/constants/theme';
+import { spacing, typography } from '@/constants/theme';
+import { useThemedStyles } from '@/hooks/useThemeColors';
 
 const initialFilters: CafeFilters = {
   query: '',
@@ -24,6 +25,27 @@ export default function HomeScreen() {
   const columns = width >= 1100 ? 3 : width >= 720 ? 2 : 1;
 
   const results = useMemo(() => filterCafes(filters), [filters]);
+
+  const styles = useThemedStyles((colors) =>
+    StyleSheet.create({
+      content: {
+        paddingHorizontal: spacing.lg,
+        paddingTop: spacing.md,
+        paddingBottom: spacing.xxl,
+        maxWidth: 1200,
+        width: '100%',
+        alignSelf: 'center',
+      },
+      header: { gap: spacing.sm, marginBottom: spacing.md },
+      brand: { ...typography.hero, color: colors.accentStrong },
+      tagline: { ...typography.caption, color: colors.textSecondary, marginTop: -4 },
+      count: { ...typography.caption, color: colors.textMuted },
+      row: { gap: spacing.md },
+      cardWrap: { marginBottom: spacing.md },
+      cardWrapMulti: { flex: 1 },
+      footer: { marginTop: spacing.md },
+    })
+  );
 
   return (
     <FlatList
@@ -62,22 +84,3 @@ export default function HomeScreen() {
     />
   );
 }
-
-const styles = StyleSheet.create({
-  content: {
-    paddingHorizontal: spacing.lg,
-    paddingTop: spacing.md,
-    paddingBottom: spacing.xxl,
-    maxWidth: 1200,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  header: { gap: spacing.sm, marginBottom: spacing.md },
-  brand: { ...typography.hero, color: colors.accentStrong },
-  tagline: { ...typography.caption, color: colors.textSecondary, marginTop: -4 },
-  count: { ...typography.caption, color: colors.textMuted },
-  row: { gap: spacing.md },
-  cardWrap: { marginBottom: spacing.md },
-  cardWrapMulti: { flex: 1 },
-  footer: { marginTop: spacing.md },
-});

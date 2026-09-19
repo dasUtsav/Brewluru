@@ -12,7 +12,8 @@ import {
 import type { CafeFilters, PriceBand } from '@/types/cafe';
 import { getFilterTags, getNeighborhoods, getPriceBands } from '@/data/cafes';
 import { TagChip } from './TagChip';
-import { colors, radius, spacing, typography } from '@/constants/theme';
+import { radius, spacing, typography } from '@/constants/theme';
+import { useThemeColors, useThemedStyles } from '@/hooks/useThemeColors';
 
 type Props = {
   filters: CafeFilters;
@@ -21,6 +22,99 @@ type Props = {
 };
 
 export function FilterBar({ filters, onChange, showWorkToggle = true }: Props) {
+  const colors = useThemeColors();
+  const styles = useThemedStyles((c) =>
+    StyleSheet.create({
+      wrap: { gap: spacing.sm },
+      search: {
+        backgroundColor: c.bgElevated,
+        borderWidth: 1,
+        borderColor: c.border,
+        borderRadius: radius.md,
+        paddingHorizontal: spacing.md,
+        paddingVertical: 10,
+        ...typography.body,
+        color: c.text,
+      },
+      row: {
+        gap: spacing.sm,
+        paddingVertical: 2,
+        paddingRight: spacing.lg,
+        alignItems: 'center',
+      },
+      activeRow: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        gap: spacing.sm,
+      },
+      clear: {
+        ...typography.label,
+        color: c.accent,
+        textTransform: 'uppercase',
+      },
+      section: {
+        ...typography.label,
+        color: c.textMuted,
+        textTransform: 'uppercase',
+        marginBottom: spacing.sm,
+        marginTop: spacing.lg,
+      },
+      sectionFirst: {
+        marginTop: spacing.sm,
+      },
+      modalRoot: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        backgroundColor: c.overlay,
+      },
+      backdropFlex: {
+        flex: 1,
+        alignSelf: 'stretch',
+      },
+      sheet: {
+        backgroundColor: c.bgElevated,
+        borderTopLeftRadius: radius.lg,
+        borderTopRightRadius: radius.lg,
+        maxHeight: '80%',
+        width: '100%',
+        paddingBottom: spacing.xl,
+      },
+      sheetWide: {
+        maxWidth: 560,
+        width: '92%',
+        borderRadius: radius.lg,
+        marginBottom: 48,
+        maxHeight: '75%',
+        borderWidth: 1,
+        borderColor: c.border,
+      },
+      sheetHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: spacing.lg,
+        paddingTop: spacing.lg,
+        paddingBottom: spacing.sm,
+        borderBottomWidth: 1,
+        borderBottomColor: c.border,
+      },
+      sheetTitle: { ...typography.subtitle, color: c.text },
+      done: { ...typography.label, color: c.accent, textTransform: 'uppercase' },
+      sheetBody: {
+        paddingHorizontal: spacing.lg,
+        paddingBottom: spacing.xl,
+        paddingTop: spacing.sm,
+      },
+      wrapChips: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        gap: spacing.sm,
+      },
+    })
+  );
+
   const [sheetOpen, setSheetOpen] = useState(false);
   const neighborhoods = getNeighborhoods();
   const tags = getFilterTags();
@@ -191,93 +285,3 @@ function shortNeighborhood(name: string): string {
   if (name.length <= 28) return name;
   return name.slice(0, 26) + '…';
 }
-
-const styles = StyleSheet.create({
-  wrap: { gap: spacing.sm },
-  search: {
-    backgroundColor: colors.bgElevated,
-    borderWidth: 1,
-    borderColor: colors.border,
-    borderRadius: radius.md,
-    paddingHorizontal: spacing.md,
-    paddingVertical: 10,
-    ...typography.body,
-    color: colors.text,
-  },
-  row: {
-    gap: spacing.sm,
-    paddingVertical: 2,
-    paddingRight: spacing.lg,
-    alignItems: 'center',
-  },
-  activeRow: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    gap: spacing.sm,
-  },
-  clear: {
-    ...typography.label,
-    color: colors.accent,
-    textTransform: 'uppercase',
-  },
-  section: {
-    ...typography.label,
-    color: colors.textMuted,
-    textTransform: 'uppercase',
-    marginBottom: spacing.sm,
-    marginTop: spacing.lg,
-  },
-  sectionFirst: {
-    marginTop: spacing.sm,
-  },
-  modalRoot: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    backgroundColor: 'rgba(28, 20, 16, 0.4)',
-  },
-  backdropFlex: {
-    flex: 1,
-    alignSelf: 'stretch',
-  },
-  sheet: {
-    backgroundColor: colors.bgElevated,
-    borderTopLeftRadius: radius.lg,
-    borderTopRightRadius: radius.lg,
-    maxHeight: '80%',
-    width: '100%',
-    paddingBottom: spacing.xl,
-  },
-  sheetWide: {
-    maxWidth: 560,
-    width: '92%',
-    borderRadius: radius.lg,
-    marginBottom: 48,
-    maxHeight: '75%',
-    borderWidth: 1,
-    borderColor: colors.border,
-  },
-  sheetHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: spacing.lg,
-    paddingTop: spacing.lg,
-    paddingBottom: spacing.sm,
-    borderBottomWidth: 1,
-    borderBottomColor: colors.border,
-  },
-  sheetTitle: { ...typography.subtitle, color: colors.text },
-  done: { ...typography.label, color: colors.accent, textTransform: 'uppercase' },
-  sheetBody: {
-    paddingHorizontal: spacing.lg,
-    paddingBottom: spacing.xl,
-    paddingTop: spacing.sm,
-  },
-  wrapChips: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: spacing.sm,
-  },
-});

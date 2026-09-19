@@ -9,7 +9,8 @@ import {
   getNeighborhoods,
   toNeighborhoodParam,
 } from '@/data/cafes';
-import { colors, spacing, typography } from '@/constants/theme';
+import { spacing, typography } from '@/constants/theme';
+import { useThemedStyles } from '@/hooks/useThemeColors';
 
 export function generateStaticParams() {
   return getNeighborhoods().map((name) => ({ name: toNeighborhoodParam(name) }));
@@ -20,6 +21,22 @@ export default function NeighborhoodScreen() {
   const raw = typeof name === 'string' ? name : name?.[0] ?? '';
   const neighborhood = fromNeighborhoodParam(raw);
   const list = getCafesByNeighborhood(neighborhood);
+
+  const styles = useThemedStyles((colors) =>
+    StyleSheet.create({
+      content: {
+        padding: spacing.lg,
+        paddingBottom: spacing.xxl,
+        maxWidth: 900,
+        width: '100%',
+        alignSelf: 'center',
+      },
+      header: { marginBottom: spacing.md },
+      subtitle: { ...typography.caption, color: colors.textSecondary },
+      cardWrap: { marginBottom: spacing.sm },
+      footer: { marginTop: spacing.lg },
+    })
+  );
 
   return (
     <>
@@ -52,17 +69,3 @@ export default function NeighborhoodScreen() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  content: {
-    padding: spacing.lg,
-    paddingBottom: spacing.xxl,
-    maxWidth: 900,
-    width: '100%',
-    alignSelf: 'center',
-  },
-  header: { marginBottom: spacing.md },
-  subtitle: { ...typography.caption, color: colors.textSecondary },
-  cardWrap: { marginBottom: spacing.sm },
-  footer: { marginTop: spacing.lg },
-});

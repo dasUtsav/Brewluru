@@ -7,16 +7,72 @@ import { Disclaimer } from '@/components/brewluru/Disclaimer';
 import { EmptyState } from '@/components/brewluru/EmptyState';
 import { TagChip } from '@/components/brewluru/TagChip';
 import { cafes, getCafeById } from '@/data/cafes';
-import { colors, radius, spacing, typography } from '@/constants/theme';
+import { radius, spacing, typography } from '@/constants/theme';
+import type { ThemeColors } from '@/constants/theme';
+import { useThemedStyles } from '@/hooks/useThemeColors';
 
 export function generateStaticParams() {
   return cafes.map((cafe) => ({ id: cafe.id }));
 }
 
+function createDetailStyles(colors: ThemeColors) {
+  return StyleSheet.create({
+    content: {
+      paddingHorizontal: spacing.lg,
+      paddingTop: spacing.md,
+      paddingBottom: spacing.xxl,
+      maxWidth: 720,
+      width: '100%',
+      alignSelf: 'center',
+      gap: spacing.md,
+    },
+    missing: { flex: 1, padding: spacing.xl, justifyContent: 'center' },
+    backBtn: {
+      alignSelf: 'center',
+      marginTop: spacing.lg,
+      backgroundColor: colors.accent,
+      paddingHorizontal: spacing.lg,
+      paddingVertical: spacing.sm,
+      borderRadius: radius.pill,
+    },
+    backBtnText: { color: colors.chipActiveText, fontWeight: '600' },
+    hero: { gap: 4 },
+    name: { ...typography.hero, color: colors.text },
+    meta: {
+      ...typography.caption,
+      color: colors.textMuted,
+      fontWeight: '600',
+    },
+    chips: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
+    body: { ...typography.body, color: colors.textSecondary },
+    muted: { ...typography.caption, color: colors.textMuted },
+    section: { gap: 6 },
+    sectionTitle: {
+      ...typography.label,
+      color: colors.textMuted,
+      textTransform: 'uppercase',
+    },
+    linkRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm, marginTop: 4 },
+    linkBtn: {
+      backgroundColor: colors.accentSoft,
+      paddingHorizontal: spacing.md,
+      paddingVertical: 6,
+      borderRadius: radius.pill,
+    },
+    linkBtnText: { ...typography.label, color: colors.accentStrong },
+    chipWrap: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+    source: { paddingVertical: 2 },
+    linkText: { ...typography.caption, color: colors.link },
+  });
+}
+
+type DetailStyles = ReturnType<typeof createDetailStyles>;
+
 export default function CafeDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const cafe = getCafeById(typeof id === 'string' ? id : id?.[0] ?? '');
   const router = useRouter();
+  const styles = useThemedStyles(createDetailStyles);
 
   if (!cafe) {
     return (
@@ -51,25 +107,25 @@ export default function CafeDetailScreen() {
         <Text style={styles.body}>{cafe.description}</Text>
 
         {cafe.address || hasLinks ? (
-          <Section title="Address">
+          <Section title="Address" styles={styles}>
             {cafe.address ? <Text style={styles.body}>{cafe.address}</Text> : null}
             {hasLinks ? (
               <View style={styles.linkRow}>
-                {cafe.mapsUrl ? <LinkButton label="Maps" url={cafe.mapsUrl} /> : null}
-                {cafe.website ? <LinkButton label="Website" url={cafe.website} /> : null}
+                {cafe.mapsUrl ? <LinkButton label="Maps" url={cafe.mapsUrl} styles={styles} /> : null}
+                {cafe.website ? <LinkButton label="Website" url={cafe.website} styles={styles} /> : null}
               </View>
             ) : null}
           </Section>
         ) : null}
 
         {cafe.seating ? (
-          <Section title="Seating">
+          <Section title="Seating" styles={styles}>
             <Text style={styles.body}>{cafe.seating}</Text>
           </Section>
         ) : null}
 
         {cafe.coffeeMenu.length > 0 ? (
-          <Section title="Coffee">
+          <Section title="Coffee" styles={styles}>
             <View style={styles.chipWrap}>
               {cafe.coffeeMenu.map((item) => (
                 <TagChip key={item} label={item} compact />
@@ -79,7 +135,7 @@ export default function CafeDetailScreen() {
         ) : null}
 
         {cafe.beansSold.length > 0 ? (
-          <Section title="Beans">
+          <Section title="Beans" styles={styles}>
             <View style={styles.chipWrap}>
               {cafe.beansSold.map((item) => (
                 <TagChip key={item} label={item} compact />
@@ -89,7 +145,7 @@ export default function CafeDetailScreen() {
         ) : null}
 
         {cafe.sourcing ? (
-          <Section title="Sourcing">
+          <Section title="Sourcing" styles={styles}>
             <Text style={styles.body}>{cafe.sourcing}</Text>
           </Section>
         ) : null}
@@ -123,7 +179,15 @@ export default function CafeDetailScreen() {
   );
 }
 
-function Section({ title, children }: { title: string; children: ReactNode }) {
+function Section({
+  title,
+  children,
+  styles,
+}: {
+  title: string;
+  children: ReactNode;
+  styles: DetailStyles;
+}) {
   return (
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>{title}</Text>
@@ -132,7 +196,15 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   );
 }
 
-function LinkButton({ label, url }: { label: string; url: string }) {
+function LinkButton({
+  label,
+  url,
+  styles,
+}: {
+  label: string;
+  url: string;
+  styles: DetailStyles;
+}) {
   return (
     <Pressable
       onPress={() => Linking.openURL(url)}
@@ -143,52 +215,3 @@ function LinkButton({ label, url }: { label: string; url: string }) {
     </Pressable>
   );
 }
-
-const styles = StyleSheet.create({
-  content: {
-    paddingHorizontal: spacing.lg,
-    paddingTop: spacing.md,
-    paddingBottom: spacing.xxl,
-    maxWidth: 720,
-    width: '100%',
-    alignSelf: 'center',
-    gap: spacing.md,
-  },
-  missing: { flex: 1, padding: spacing.xl, justifyContent: 'center' },
-  backBtn: {
-    alignSelf: 'center',
-    marginTop: spacing.lg,
-    backgroundColor: colors.accent,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.sm,
-    borderRadius: radius.pill,
-  },
-  backBtnText: { color: colors.chipActiveText, fontWeight: '600' },
-  hero: { gap: 4 },
-  name: { ...typography.hero, color: colors.text },
-  meta: {
-    ...typography.caption,
-    color: colors.textMuted,
-    fontWeight: '600',
-  },
-  chips: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
-  body: { ...typography.body, color: colors.textSecondary },
-  muted: { ...typography.caption, color: colors.textMuted },
-  section: { gap: 6 },
-  sectionTitle: {
-    ...typography.label,
-    color: colors.textMuted,
-    textTransform: 'uppercase',
-  },
-  linkRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm, marginTop: 4 },
-  linkBtn: {
-    backgroundColor: colors.accentSoft,
-    paddingHorizontal: spacing.md,
-    paddingVertical: 6,
-    borderRadius: radius.pill,
-  },
-  linkBtnText: { ...typography.label, color: colors.accentStrong },
-  chipWrap: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
-  source: { paddingVertical: 2 },
-  linkText: { ...typography.caption, color: colors.link },
-});
