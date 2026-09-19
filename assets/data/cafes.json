@@ -1,0 +1,1722 @@
+[
+  {
+    "id": "araku-coffee-indiranagar",
+    "name": "ARAKU Coffee (Flagship)",
+    "neighborhood": "Indiranagar",
+    "address": "968, 12th Main Road, HAL 2nd Stage, Doopanahalli, Indiranagar, Bengaluru 560008",
+    "website": "https://www.arakucoffee.in/pages/bangalore",
+    "mapsUrl": "https://maps.google.com/?q=ARAKU+Coffee+Indiranagar+Bangalore",
+    "seating": "Indoor, two-storeyed spacious cafe with bookstore; tranquil oasis vibe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso drinks",
+      "pour-over (V60)",
+      "French Press",
+      "AeroPress",
+      "Chemex",
+      "Moka Pot",
+      "manual brew sensory bar",
+      "retail beans & brew gear"
+    ],
+    "beansSold": [
+      "ARAKU single origins",
+      "house retail bags",
+      "manual brew equipment"
+    ],
+    "sourcing": "Araku Valley (Andhra Pradesh) tribal-grown coffee; in-house roastery at flagship; India's first Modbar and SCA-certified Premier Training Campus",
+    "priceRange": "₹₹–₹₹₹",
+    "tags": [
+      "specialty coffee",
+      "in-house roastery",
+      "SCA academy",
+      "fine dining cafe",
+      "bookstore",
+      "flagship"
+    ],
+    "description": "ARAKU's India flagship pairs specialty coffee with fine dining in a two-storey Indiranagar space with an in-house roastery, Modbar sensory bar, and SCA coffee academy.",
+    "confidenceNotes": "Coffee programme, roastery, and address high confidence from official site. Wifi/charging unknown.",
+    "sources": [
+      "https://www.arakucoffee.in/pages/bangalore",
+      "https://elledecor.in/best-coffee-cafes-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "kura-indiranagar",
+    "name": "Kura",
+    "neighborhood": "Indiranagar",
+    "address": "Park Inn Craig Park Layout, 26, Paramahansa Yogananda Rd (Double Road), Stage 3, Indiranagar, Bengaluru 560008",
+    "website": "https://www.kuracafe.in/",
+    "mapsUrl": "https://maps.app.goo.gl/XSpfFqCCuvpYGwhW7",
+    "seating": "Indoor, ~3000 sqft destination cafe; spacious all-day dining",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso",
+      "manual brew bar",
+      "experimental specialty programme",
+      "Coffee Omakase (weekly)",
+      "cold foam / signature drinks"
+    ],
+    "beansSold": [
+      "reserve lots",
+      "Indian estate coffees"
+    ],
+    "sourcing": "Experimental programme rooted in Chikkamagaluru estates; founders SCA-certified",
+    "priceRange": "₹₹₹",
+    "tags": [
+      "specialty coffee",
+      "brunch",
+      "bakery",
+      "omakase",
+      "all-day dining"
+    ],
+    "description": "Large Indiranagar specialty cafe combining an experimental coffee programme, in-house bakery/patisserie, and French/Japanese-influenced kitchen. Weekly Coffee Omakase.",
+    "confidenceNotes": "Address, hours, coffee programme high from official site. Wifi/charging unknown.",
+    "sources": [
+      "https://www.kuracafe.in/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "truebrew-indiranagar",
+    "name": "TrueBrew Cafe & Restaurant",
+    "neighborhood": "Indiranagar",
+    "address": "3163, Paramahansa Yogananda Road / 12th A Main Rd, HAL 2nd Stage, Indiranagar, Bengaluru 560008",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=TrueBrew+Cafe+Indiranagar+Bangalore",
+    "seating": "Indoor restaurant-cafe; all-day breakfast vibe",
+    "wifi": "yes",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "pour-overs",
+      "cold brew",
+      "espresso drinks",
+      "all-day continental breakfast"
+    ],
+    "beansSold": [],
+    "sourcing": "Conceived by a certified Q Grader; specialty focus (specific farm names not verified)",
+    "priceRange": "₹₹–₹₹₹ (~₹800 for two)",
+    "tags": [
+      "specialty coffee",
+      "brunch",
+      "Q grader",
+      "breakfast"
+    ],
+    "description": "Specialty coffee house in Indiranagar led by a Q Grader, known for pour-overs, cold brews, espresso, and all-day continental breakfast. Free Wi-Fi mentioned in public reviews.",
+    "confidenceNotes": "Wifi claimed in reviews — medium confidence. Exact farm sourcing unknown.",
+    "sources": [
+      "https://magicpin.in/Bangalore/Indira-Nagar-2nd-Stage/Restaurant/Truebrew-Cafe-and-Restaurant/store/197a548"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "humblebean-indiranagar",
+    "name": "HumbleBean Coffee",
+    "neighborhood": "Indiranagar",
+    "address": "3165, Ground & First Floor, HAL 2nd Stage, 60 Feet Service Road, Indiranagar, Bengaluru",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=HumbleBean+Coffee+Indiranagar",
+    "seating": "Indoor, ground & first floor; quieter vibe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "cafe coffee",
+      "breakfast",
+      "light cafe food"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown",
+    "priceRange": "₹₹ (~₹1,000 for two)",
+    "tags": [
+      "cafe",
+      "breakfast",
+      "neighborhood"
+    ],
+    "description": "Two-level Indiranagar cafe known for fresh food, calm ambience, and all-day cafe dining.",
+    "confidenceNotes": "Address and vibe from Zomato — medium. Wifi/charging/sourcing unknown.",
+    "sources": [
+      "https://www.zomato.com/bangalore/humblebean-coffee-indiranagar-bangalore"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "kind-roastery-indiranagar",
+    "name": "The Kind Roastery & Brew Room (Indiranagar)",
+    "neighborhood": "Indiranagar",
+    "address": "2985, 12th Main Rd, HAL 2nd Stage, Indiranagar, Bengaluru 560008",
+    "website": "https://thekindindia.com/",
+    "mapsUrl": "https://maps.google.com/?q=The+Kind+Roastery+Indiranagar",
+    "seating": "Indoor with flexible movable seating; design-forward cosy corners",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso drinks",
+      "brew bar",
+      "Vietnamese espresso",
+      "specialty coffee"
+    ],
+    "beansSold": [
+      "in-house roasted Fairtrade coffee"
+    ],
+    "sourcing": "In-house roasting; Fairtrade coffee; vegetarian coffee roastery & brew room (brand claim)",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "vegetarian",
+      "in-house roastery",
+      "eggless bakery",
+      "community",
+      "work-friendly"
+    ],
+    "description": "Women-led vegetarian resto-cafe and in-house roastery with thoughtful design and community events.",
+    "confidenceNotes": "Address and in-house roast high from official site. Wifi/charging unknown.",
+    "sources": [
+      "https://thekindindia.com/",
+      "https://elledecor.in/cafe-in-bengaluru-the-kind-roastery-indiranagar-the-local-studio/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "kind-roastery-jp-nagar",
+    "name": "The Kind Roastery & Brew Room (JP Nagar)",
+    "neighborhood": "JP Nagar",
+    "address": "18 B Main Rd, Marenahalli, 2nd Phase, J.P. Nagar, Bengaluru 560078",
+    "website": "https://thekindindia.com/",
+    "mapsUrl": "https://maps.google.com/?q=The+Kind+Roastery+JP+Nagar",
+    "seating": "Indoor neighborhood resto-cafe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "specialty coffee",
+      "brew bar",
+      "vegetarian cafe food",
+      "eggless bakery"
+    ],
+    "beansSold": [
+      "in-house roasted Fairtrade coffee"
+    ],
+    "sourcing": "In-house roasting; Fairtrade (brand claim)",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "vegetarian",
+      "neighborhood",
+      "bakery"
+    ],
+    "description": "Original JP Nagar Kind location — vegetarian cafe, specialty roast, and eggless bakery.",
+    "confidenceNotes": "Address high from official site. Facility facts unknown.",
+    "sources": [
+      "https://thekindindia.com/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "kind-roastery-bellandur",
+    "name": "The Kind Roastery & Brew Room (Bellandur)",
+    "neighborhood": "Bellandur",
+    "address": "RMZ ECOWORLD, The Bay, Bellandur, Bengaluru 560103",
+    "website": "https://thekindindia.com/",
+    "mapsUrl": "https://maps.google.com/?q=The+Kind+Roastery+Bellandur+EcoWorld",
+    "seating": "Indoor zen-like space with alfresco katte-style seating at entrance",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "specialty coffee",
+      "Vietnamese espresso",
+      "brew bar"
+    ],
+    "beansSold": [
+      "in-house roasted Fairtrade coffee"
+    ],
+    "sourcing": "In-house roasting; Fairtrade (brand claim)",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "vegetarian",
+      "design cafe",
+      "East Bangalore"
+    ],
+    "description": "Kind's Bellandur EcoWorld outpost with a sandstone brew bar and informal outdoor katte seating.",
+    "confidenceNotes": "Address and design details from official + Elle Decor. Wifi/charging unknown.",
+    "sources": [
+      "https://thekindindia.com/",
+      "https://elledecor.in/best-coffee-cafes-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "kopitiam-lah-indiranagar",
+    "name": "Kopitiam Lah",
+    "neighborhood": "Indiranagar",
+    "address": "Ground Floor, 1088, 12th Main Rd, Doopanahalli, Indiranagar, Bengaluru",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Kopitiam+Lah+Indiranagar",
+    "seating": "Indoor ~72-seater Malaysian-inspired kopitiam",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "Malaysian kopi",
+      "Pandan brew",
+      "Milo cold kopi",
+      "kaya drinks"
+    ],
+    "beansSold": [],
+    "sourcing": "Malaysian kopitiam-style coffee programme (not Indian third-wave single-origin focused)",
+    "priceRange": "₹₹₹",
+    "tags": [
+      "Malaysian",
+      "brunch",
+      "design cafe",
+      "kopi"
+    ],
+    "description": "Malaysian-style coffee shop on Indiranagar 12th Main serving kopi, pandan, milo cold kopi, and Southeast Asian cafe bites.",
+    "confidenceNotes": "Address and concept from Curly Tales / Elle Decor. Wifi/charging unknown.",
+    "sources": [
+      "https://curlytales.com/8-best-coffee-shops-in-bengaluru-for-speciality-brews-handcrafted-bites-stellar-vibes/",
+      "https://elledecor.in/best-coffee-cafes-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "paper-and-pie-indiranagar",
+    "name": "Paper & Pie",
+    "neighborhood": "Indiranagar",
+    "address": "842/A, Metro Pillar 55, 100 Feet Road, Indira Nagar 1st Stage, H Colony, Bengaluru 560038",
+    "website": "https://www.paperandpie.in/",
+    "mapsUrl": "https://maps.google.com/?q=Paper+and+Pie+Indiranagar",
+    "seating": "Indoor work-oriented cafe; meeting room and podcasting space; laptop-friendly",
+    "wifi": "yes",
+    "charging": "yes",
+    "coffeeMenu": [
+      "Chikmagalur coffee",
+      "spiced orange cold brew",
+      "espresso drinks",
+      "brunch / toast"
+    ],
+    "beansSold": [],
+    "sourcing": "Chikmagalur coffee (via Elle Decor); detailed farm list unknown",
+    "priceRange": "₹₹–₹₹₹",
+    "tags": [
+      "work-friendly",
+      "specialty coffee",
+      "brunch",
+      "meeting rooms",
+      "podcast studio"
+    ],
+    "description": "Indiranagar work cafe with Chikmagalur coffee, inventive cold brews, and productivity amenities including a meeting room and podcast space.",
+    "confidenceNotes": "Wifi and charging reported by laptop-friendly directories — medium-high. Sourcing detail limited.",
+    "sources": [
+      "https://elledecor.in/best-coffee-cafes-bengaluru/",
+      "https://laptopfriendlycafe.com/cafes/bengaluru/paper-pie",
+      "https://www.timeout.com/bengaluru/restaurants/paper-pie"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "deliciae-indiranagar",
+    "name": "Deliciae by Bunty Mahajan",
+    "neighborhood": "Indiranagar",
+    "address": "2906, Ground Floor, 80 Feet Road, HAL 2nd Stage, Indiranagar, Bengaluru",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Deliciae+Bunty+Mahajan+Indiranagar",
+    "seating": "Indoor bijou pastel patisserie-cafe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "americano",
+      "espresso drinks",
+      "patisserie pairing"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown",
+    "priceRange": "₹₹–₹₹₹",
+    "tags": [
+      "patisserie",
+      "dessert",
+      "design cafe",
+      "coffee and cake"
+    ],
+    "description": "Pastel Indiranagar patisserie-cafe where coffee pairs with Bunty Mahajan desserts — best for cake-and-americano, not long laptop sessions.",
+    "confidenceNotes": "Address from Zomato/Swiggy. Coffee sourcing unknown.",
+    "sources": [
+      "https://elledecor.in/best-coffee-cafes-bengaluru/",
+      "https://www.zomato.com/bangalore/deliciae-by-bunty-mahajan-indiranagar-bangalore/info"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "subko-craftery-koramangala",
+    "name": "Subko Craftery",
+    "neighborhood": "Koramangala",
+    "address": "BLR 68, BBMP PID No. 374, 2-374, 3rd Block, Koramangala (Koramangala–Sarjapur Road), Bengaluru 560034",
+    "website": "https://subkocoffee.com/",
+    "mapsUrl": "https://maps.google.com/?q=Subko+Craftery+Koramangala",
+    "seating": "Indoor/outdoor both — ~9000 sqft with courtyard, glasshouse, tree-shaded amphitheatre, upstairs PitchCity; fully pet-friendly",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso bar",
+      "filter / SIF on the rocks",
+      "cascara drinks",
+      "cold foam drinks",
+      "cupping via Sensory Lab",
+      "canned RTD",
+      "hot chocolate / cacao"
+    ],
+    "beansSold": [
+      "Subko signature coffees",
+      "cacao bars",
+      "bakehouse goods"
+    ],
+    "sourcing": "Subko-sourced Indian subcontinent coffees incl. tribal communities in Andhra Pradesh; cacao mill and bakehouse on site",
+    "priceRange": "₹₹–₹₹₹ (espresso ~₹240+)",
+    "tags": [
+      "specialty coffee",
+      "cacao",
+      "bakehouse",
+      "pet-friendly",
+      "sensory lab",
+      "flagship",
+      "startup-friendly"
+    ],
+    "description": "Subko's largest India footprint — a Koramangala coffee/cacao/bakehouse campus with courtyard amphitheatre, Sensory Lab cuppings, and PitchCity seating.",
+    "confidenceNotes": "Space, menu, address high from CN Traveller June 2025. Wifi/charging not explicitly confirmed.",
+    "sources": [
+      "https://www.cntraveller.in/story/subko-craftery-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "subko-ajji-house-shantinagar",
+    "name": "Subko Ajji House",
+    "neighborhood": "Shantinagar",
+    "address": "105, Kengal Hanumanthaiah Rd, The Courtyard, opp. Corporation Bank, Shanti Nagar, Bengaluru",
+    "website": "https://subkocoffee.com/",
+    "mapsUrl": "https://maps.google.com/?q=Subko+Ajji+House+Courtyard+Shantinagar",
+    "seating": "Indoor across ~2500 sqft / two floors in a 70-year-old home with brick walls and red oxide floors",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso drinks",
+      "South Indian filter coffee",
+      "specialty mocha / seasonal",
+      "croissants & bakehouse"
+    ],
+    "beansSold": [
+      "Subko retail coffee",
+      "specialty chocolate"
+    ],
+    "sourcing": "Subko roaster programme (Indian subcontinent focus)",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "heritage home",
+      "bakehouse",
+      "filter coffee"
+    ],
+    "description": "Subko's sit-down Bengaluru home in a restored old house at The Courtyard — red oxide floors, specialty coffee, and bakehouse croissants.",
+    "confidenceNotes": "Address and concept from Curly Tales / Elle Decor. Wifi/charging unknown.",
+    "sources": [
+      "https://curlytales.com/8-best-coffee-shops-in-bengaluru-for-speciality-brews-handcrafted-bites-stellar-vibes/",
+      "https://elledecor.in/best-coffee-cafes-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "subko-mini-indiranagar",
+    "name": "Subko Mini (Bombay Shirt Company)",
+    "neighborhood": "Indiranagar",
+    "address": "789/A, Ground Floor, 12th Main Rd, HAL 2nd Stage, Doopanahalli, Indiranagar, Bengaluru 560038",
+    "website": "https://subkocoffee.com/",
+    "mapsUrl": "https://maps.google.com/?q=Subko+Mini+Bombay+Shirt+Company+Indiranagar",
+    "seating": "Indoor shop-in-shop; limited seating / grab-and-go leaning",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso drinks",
+      "Subko specialty coffee",
+      "grab-and-go"
+    ],
+    "beansSold": [
+      "Subko retail bags"
+    ],
+    "sourcing": "Subko roaster programme",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "shop-in-shop",
+      "grab-and-go"
+    ],
+    "description": "Compact Subko counter inside Bombay Shirt Company on Indiranagar 12th Main.",
+    "confidenceNotes": "Address from Corner/magicpin listings. Seating limited.",
+    "sources": [
+      "https://www.corner.inc/place/63507",
+      "https://www.zomato.com/bangalore/subko-specialty-coffee-roasters-indiranagar-bangalore"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "maverick-farmer-ulsoor",
+    "name": "Maverick & Farmer Coffee (Ulsoor)",
+    "neighborhood": "Ulsoor",
+    "address": "Gate #3, RBANMS Grounds, Gangadhar Chetty Road / 32 Gangadhara Chetty Road, Halasuru, Bengaluru 560042",
+    "website": "https://www.maverickandfarmer.com/",
+    "mapsUrl": "https://maps.google.com/?q=Maverick+and+Farmer+Coffee+Ulsoor",
+    "seating": "Mostly open-air / broad outdoor-leaning room overlooking football grounds; spacious",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "pour-over / manual brews",
+      "espresso",
+      "cold brew",
+      "Ol' Smoky (cold-smoked)",
+      "experimental signature drinks"
+    ],
+    "beansSold": [
+      "estate retail bags",
+      "Arabica & Robusta blends",
+      "experimental lots"
+    ],
+    "sourcing": "Grown on brand's ~140-acre estate in Pollibetta, Coorg; roasted daily in Bangalore",
+    "priceRange": "₹₹",
+    "tags": [
+      "farm-to-cup",
+      "specialty coffee",
+      "experimental",
+      "outdoor",
+      "brunch",
+      "retail beans"
+    ],
+    "description": "Farm-to-cup cafe beside Ulsoor football grounds serving Coorg estate coffee roasted in Bengaluru, with inventive drinks like Ol' Smoky.",
+    "confidenceNotes": "Estate sourcing and roast high from official site + Filter Notes. Wifi/charging unknown.",
+    "sources": [
+      "https://www.maverickandfarmer.com/",
+      "https://www.filternotes.com/bengaluru/maverick-and-farmer-coffee",
+      "https://curlytales.com/8-best-coffee-shops-in-bengaluru-for-speciality-brews-handcrafted-bites-stellar-vibes/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "maverick-farmer-koramangala",
+    "name": "Maverick & Farmer Coffee (Koramangala)",
+    "neighborhood": "Koramangala",
+    "address": "162/163, Kathalipalya / 15th Main, 80 Feet Road, 4th Block, Koramangala, Bengaluru",
+    "website": "https://www.maverickandfarmer.com/",
+    "mapsUrl": "https://maps.google.com/?q=Maverick+and+Farmer+Coffee+Koramangala",
+    "seating": "Indoor/outdoor cafe seating",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "manual brews",
+      "espresso",
+      "cold brew",
+      "experimental signatures",
+      "all-day breakfast"
+    ],
+    "beansSold": [
+      "estate retail bags"
+    ],
+    "sourcing": "Coorg Pollibetta estate; daily Bangalore roast",
+    "priceRange": "₹₹",
+    "tags": [
+      "farm-to-cup",
+      "specialty coffee",
+      "brunch"
+    ],
+    "description": "Koramangala outlet of Maverick & Farmer — Coorg estate coffee and experimental drink programme.",
+    "confidenceNotes": "Address varies slightly across listings — medium. Sourcing high.",
+    "sources": [
+      "https://www.maverickandfarmer.com/",
+      "https://www.filternotes.com/bengaluru/maverick-and-farmer-coffee"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "firefly-jayanagar",
+    "name": "Firefly Coffee Roasters",
+    "neighborhood": "Jayanagar",
+    "address": "RR Elegance Building, Ground Floor, Jayanagar 4th T Block (next to SSMRV College), Bengaluru",
+    "website": "https://www.fireflycoffeeroasters.com/",
+    "mapsUrl": "https://maps.google.com/?q=Firefly+Coffee+Roasters+Jayanagar",
+    "seating": "Indoor neighborhood specialty cafe; community events (jazz, book clubs)",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso",
+      "cortado",
+      "cappuccino",
+      "latte",
+      "americano",
+      "cold brew",
+      "espresso tonic",
+      "bean flights",
+      "retail beans"
+    ],
+    "beansSold": [
+      "single-origin Arabica retail"
+    ],
+    "sourcing": "Single-origin 100% Arabica from Boothangudi & Salawara estates, Western Ghats; small-batch roast; chocolate from Modello (Karnataka)",
+    "priceRange": "₹₹ (espresso ~₹170; lattes ~₹210–270)",
+    "tags": [
+      "specialty coffee",
+      "neighborhood",
+      "single origin",
+      "community events",
+      "retail beans"
+    ],
+    "description": "Jayanagar specialty roaster-cafe focused on Western Ghats single origins, with inventive lattes, cold brew, bean flights, and neighborhood events.",
+    "confidenceNotes": "Menu, sourcing, address high from official site. Wifi/charging unknown.",
+    "sources": [
+      "https://www.fireflycoffeeroasters.com/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "groundup-jayanagar",
+    "name": "GroundUp Coffee & Roastery (Jayanagar)",
+    "neighborhood": "Jayanagar",
+    "address": "265, T Mariappa Rd, 6th Block / 1st Block, Jayanagar, Bengaluru",
+    "website": "https://groundupcoffee.in/",
+    "mapsUrl": "https://maps.google.com/?q=Ground+Up+Coffee+Roastery+Jayanagar",
+    "seating": "Indoor small roastery cafe; limited seating; coffee-nerd vibe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso / cortado",
+      "manual brews",
+      "experimental lots",
+      "pastries",
+      "retail bags"
+    ],
+    "beansSold": [
+      "Salawara Blend",
+      "estate retail bags",
+      "experimental lots"
+    ],
+    "sourcing": "Own Salawara Estate (Western Ghats foothills); in-house roasting on-site",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "estate-owned",
+      "in-house roastery",
+      "retail beans"
+    ],
+    "description": "Compact Jayanagar farm-to-cup roastery cafe roasting Salawara Estate beans on site — cortados, manual brews, and take-home bags.",
+    "confidenceNotes": "Sourcing and address high from official + Corner. Wifi unknown.",
+    "sources": [
+      "https://groundupcoffee.in/",
+      "https://www.corner.inc/place/p586E2SGGjwZ"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "groundup-indiranagar",
+    "name": "GroundUp (Indiranagar)",
+    "neighborhood": "Indiranagar",
+    "address": "HAL 2nd Stage, Indiranagar, Bengaluru (exact street number varies across listings)",
+    "website": "https://groundupcoffee.in/",
+    "mapsUrl": "https://maps.google.com/?q=GroundUp+Coffee+Indiranagar",
+    "seating": "Indoor minimalist specialty cafe; small seating",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "in-house roasted pour-over",
+      "espresso",
+      "cold brew with tonic",
+      "light breakfast"
+    ],
+    "beansSold": [
+      "Salawara estate retail"
+    ],
+    "sourcing": "Salawara Estate; in-house roast",
+    "priceRange": "₹₹ (~₹350 per person reported)",
+    "tags": [
+      "specialty coffee",
+      "estate-owned",
+      "pour-over",
+      "minimalist"
+    ],
+    "description": "Indiranagar GroundUp outpost known for pour-overs from estate-roasted beans and a minimalist coffee-enthusiast atmosphere.",
+    "confidenceNotes": "Neighborhood and menu from explorebangalore; exact pin may need Maps verification.",
+    "sources": [
+      "https://www.explorebangalore.com/cafes/groundup",
+      "https://groundupcoffee.in/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "benki-jayanagar",
+    "name": "Benki Coffee",
+    "neighborhood": "Jayanagar",
+    "address": "335, 36th A Cross, 9th Main Road, 5th Block, Jayanagar, Bengaluru",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Benki+Coffee+Jayanagar",
+    "seating": "Indoor neighborhood specialty cafe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso classics",
+      "Saffron Latte",
+      "Asava Cold Brew",
+      "Lotus Latte",
+      "retail roasted coffee",
+      "handcrafted chocolates"
+    ],
+    "beansSold": [
+      "freshly roasted packets"
+    ],
+    "sourcing": "Beans from Sakleshpur coffee estates (Curly Tales)",
+    "priceRange": "₹–₹₹",
+    "tags": [
+      "specialty coffee",
+      "neighborhood",
+      "retail beans",
+      "signature lattes"
+    ],
+    "description": "Jayanagar specialty spot roasting Sakleshpur beans, known for Saffron Latte and Asava Cold Brew, plus take-home bags and chocolates.",
+    "confidenceNotes": "Address and sourcing from Curly Tales / Corner. Wifi unknown.",
+    "sources": [
+      "https://curlytales.com/8-best-coffee-shops-in-bengaluru-for-speciality-brews-handcrafted-bites-stellar-vibes/",
+      "https://www.corner.inc/place/288022"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "caffeine-baar-jayanagar",
+    "name": "The Caffeine Baar (Jayanagar)",
+    "neighborhood": "Jayanagar",
+    "address": "1424/81, Next to Central Mall, South End A Cross, Jayanagar 9th Block, Bengaluru 560069",
+    "website": "https://www.thecaffeinebaar.com/pages/cafe-in-jayanagar",
+    "mapsUrl": "https://maps.google.com/?q=The+Caffeine+Baar+Jayanagar",
+    "seating": "Indoor cafe & roastery; cupping room",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso (Sanremo Cafe Racer)",
+      "siphon",
+      "pour-over",
+      "French Press",
+      "Chemex",
+      "inverted AeroPress",
+      "cold brew",
+      "cupping"
+    ],
+    "beansSold": [
+      "~7 varieties seed-to-cup beans from Baarbara Estate"
+    ],
+    "sourcing": "Shade-grown single-origin from Baarbara Estate; seed-to-cup",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "manual brew",
+      "cupping",
+      "seed-to-cup",
+      "roastery"
+    ],
+    "description": "Flagship Jayanagar cafe-roastery with serious manual brew kit and seed-to-cup Baarbara Estate beans, plus a cupping room.",
+    "confidenceNotes": "Sourcing and methods high from official site. Wifi/charging unknown.",
+    "sources": [
+      "https://www.thecaffeinebaar.com/pages/cafe-in-jayanagar"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "caffeine-baar-church-street",
+    "name": "The Caffeine Baar (Church Street)",
+    "neighborhood": "Church Street",
+    "address": "46-1/1 to 46-1/4, Old 14D, Shanthalanagar, Church Street, Bengaluru",
+    "website": "https://www.thecaffeinebaar.com/",
+    "mapsUrl": "https://maps.google.com/?q=The+Caffeine+Baar+Church+Street",
+    "seating": "Indoor + outdoor overlooking Church Street; muted interiors",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso drinks",
+      "manual brews",
+      "all-day breakfast",
+      "Mocha Tres Leches"
+    ],
+    "beansSold": [
+      "Baarbara Estate / TCB retail beans"
+    ],
+    "sourcing": "Baarbara Estate seed-to-cup programme",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "brunch",
+      "outdoor seating",
+      "Church Street"
+    ],
+    "description": "Church Street outpost of Caffeine Baar with outdoor seats facing the street, all-day breakfast, and specialty brews.",
+    "confidenceNotes": "Address from Curly Tales. Wifi unknown.",
+    "sources": [
+      "https://curlytales.com/8-best-coffee-shops-in-bengaluru-for-speciality-brews-handcrafted-bites-stellar-vibes/",
+      "https://www.thecaffeinebaar.com/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "juno-hsr",
+    "name": "Juno Coffee Club",
+    "neighborhood": "HSR Layout",
+    "address": "385, Ground Floor, 28th Main, 10th Cross Rd, 1st Sector, HSR Layout, Bengaluru 560102",
+    "website": "https://junocoffeeclub.com/",
+    "mapsUrl": "https://maps.google.com/?q=Juno+Coffee+Club+HSR",
+    "seating": "Indoor living-room vibe with couches; pour-over bar section; intimate neighborhood scale",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "pour-overs",
+      "espresso-based drinks",
+      "cold brew",
+      "signature iced lattes",
+      "cascara drinks"
+    ],
+    "beansSold": [],
+    "sourcing": "In-house blends plus origin coffees incl. Colombian lots on menu; detailed farm list not fully published",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "pour-over",
+      "neighborhood",
+      "cold brew",
+      "signatures"
+    ],
+    "description": "Warm HSR specialty cafe calling itself a living room — dedicated pour-over bar, inventive cold brews, and curious signature drinks. Tuesdays off.",
+    "confidenceNotes": "Address and menu high from official site. Wifi/charging unknown.",
+    "sources": [
+      "https://junocoffeeclub.com/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "beanlore-hsr",
+    "name": "Beanlore Coffee Roasters (HSR)",
+    "neighborhood": "HSR Layout",
+    "address": "450, 17th Cross, Sector 4, HSR Layout, Bengaluru (verify pin on Maps)",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Beanlore+Coffee+Roasters+HSR",
+    "seating": "Indoor modern minimalist interiors (Studio Camarada design)",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "flat white",
+      "espresso tonic",
+      "freddo cappuccino",
+      "creative lattes",
+      "cereal latte"
+    ],
+    "beansSold": [
+      "house blend retail likely"
+    ],
+    "sourcing": "House blend Arabica & Robusta from Salawara Estate, Belur noted on menu blurbs",
+    "priceRange": "₹₹–₹₹₹",
+    "tags": [
+      "specialty coffee",
+      "design cafe",
+      "signatures",
+      "multi-outlet"
+    ],
+    "description": "Design-forward HSR specialty cafe known for creative drinks and Salawara-sourced house blends.",
+    "confidenceNotes": "Design and drinks from Elle Decor / explorebangalore. Exact address medium — verify.",
+    "sources": [
+      "https://elledecor.in/best-coffee-cafes-bengaluru/",
+      "https://www.zomato.com/bangalore/beanlore-coffee-roasters-bommanahalli-bangalore"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "beanlore-whitefield",
+    "name": "Beanlore Coffee Roasters (Whitefield)",
+    "neighborhood": "Whitefield",
+    "address": "ITPB Road, Whitefield, Bengaluru (exact unit verify on Maps)",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Beanlore+Coffee+Roasters+Whitefield",
+    "seating": "Indoor modern cafe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "flat white",
+      "specialty drinks",
+      "light cafe food"
+    ],
+    "beansSold": [],
+    "sourcing": "Salawara Estate Belur house blend (brand menu notes)",
+    "priceRange": "₹₹–₹₹₹",
+    "tags": [
+      "specialty coffee",
+      "Whitefield",
+      "IT corridor"
+    ],
+    "description": "Whitefield Beanlore outlet bringing specialty drinks and a modern cafe format to the IT corridor.",
+    "confidenceNotes": "Neighborhood confirmed via explorebangalore; precise address medium.",
+    "sources": [
+      "https://www.explorebangalore.com/cafes/beanlore-coffee-roasters"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "beanlore-indiranagar",
+    "name": "Beanlore Coffee Roasters (Indiranagar)",
+    "neighborhood": "Indiranagar",
+    "address": "503, Chinmaya Mission Hospital Road, Indiranagar, Bengaluru",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Beanlore+Coffee+Roasters+Indiranagar",
+    "seating": "Indoor specialty cafe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "specialty espresso drinks",
+      "creative lattes",
+      "cold specialty drinks"
+    ],
+    "beansSold": [],
+    "sourcing": "Salawara Estate house blend (brand)",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "multi-outlet"
+    ],
+    "description": "Indiranagar Beanlore location for specialty espresso drinks and inventive lattes.",
+    "confidenceNotes": "Address from Zomato listing. Facility facts unknown.",
+    "sources": [
+      "https://www.zomato.com/bangalore/beanlore-coffee-roasters-indiranagar-bangalore"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "nerlu-crescent-road",
+    "name": "Nerlu Cafe",
+    "neighborhood": "Crescent Road / Race Course",
+    "address": "Ground Floor, 30, Crescent Rd, Madhava Nagar, Gandhi Nagar, Bengaluru 560001",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Nerlu+Cafe+Crescent+Road+Bangalore",
+    "seating": "Indoor minimalist + quiet shaded outdoor patio; excellent for solo work/reading",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "rotating multi-roaster pour-overs (Hario Switch)",
+      "espresso",
+      "specialty iced drinks",
+      "open-faced sandwiches",
+      "pastries"
+    ],
+    "beansSold": [
+      "rotating guest Indian roasters"
+    ],
+    "sourcing": "Rotating library of independent Indian roasters (selection rotates ~every 2 weeks) — not a single house roast",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "multi-roaster",
+      "pour-over",
+      "patio",
+      "quiet",
+      "Indian coffee discovery"
+    ],
+    "description": "Leafy Crescent Road cafe that rotates independent Indian roasters every couple of weeks — pour-over discovery with a quiet patio.",
+    "confidenceNotes": "Concept and address well documented. Wifi/charging unknown despite work-friendly vibe.",
+    "sources": [
+      "https://elledecor.in/best-coffee-cafes-bengaluru/",
+      "https://www.pearlclub.com/cities/bangalore/cafes/nerlu",
+      "https://www.corner.inc/place/pMBTUGQ9vqKY"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "dyu-art-cafe-koramangala",
+    "name": "DYU Art Café",
+    "neighborhood": "Koramangala",
+    "address": "No. 23, near Mangala Kalyana Mantapa, MIG KHB Colony, Koramangala 8th Block, Bengaluru 560095",
+    "website": "https://dyuartcafe.com/",
+    "mapsUrl": "https://maps.google.com/?q=DYU+Art+Cafe+Koramangala",
+    "seating": "Indoor/outdoor both — charming bungalow with sloping roofs and open courtyards",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "iced coffee",
+      "cafe coffee",
+      "breakfast spread",
+      "cafe dining"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown",
+    "priceRange": "₹₹",
+    "tags": [
+      "brunch",
+      "garden cafe",
+      "art cafe",
+      "outdoor",
+      "iconic"
+    ],
+    "description": "Koramangala bungalow cafe with courtyards — longtime favorite for rainy-day iced coffee and leisurely breakfasts more than hardcore specialty geekery.",
+    "confidenceNotes": "Address and vibe from Elle Decor. Coffee sourcing unknown — more ambience-led.",
+    "sources": [
+      "https://elledecor.in/best-coffee-cafes-bengaluru/",
+      "https://dyuartcafe.com/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "suay-jp-nagar",
+    "name": "Suay",
+    "neighborhood": "JP Nagar",
+    "address": "7, 5th Phase, Outer Ring Road / 100 Feet Ring Road, JP Nagar, Bengaluru",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Suay+Cafe+JP+Nagar+Bangalore",
+    "seating": "Indoor minimalist converted home with cosy nooks; co-working-friendly pockets",
+    "wifi": "yes",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "Vietnamese phin coffee",
+      "Vietnamese espresso",
+      "coconut latte",
+      "specialty coffee",
+      "Asian cafe bites (banh mi, katsu sando)"
+    ],
+    "beansSold": [],
+    "sourcing": "Vietnamese-sourced beans for phin coffee (Curly Tales / Indulg Express)",
+    "priceRange": "₹₹–₹₹₹",
+    "tags": [
+      "Vietnamese coffee",
+      "work-friendly",
+      "Asian cafe",
+      "design cafe",
+      "wifi"
+    ],
+    "description": "JP Nagar Vietnamese-leaning Asian cafe with phin coffee, free Wi-Fi for remote work, and a Studio Camarada-designed quiet interior.",
+    "confidenceNotes": "Free Wi-Fi explicitly stated by Curly Tales — medium-high. Charging unknown.",
+    "sources": [
+      "https://curlytales.com/8-best-coffee-shops-in-bengaluru-for-speciality-brews-handcrafted-bites-stellar-vibes/",
+      "https://elledecor.in/best-coffee-cafes-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "champaca-vasanth-nagar",
+    "name": "Champaca Bookstore Café (Vasanth Nagar)",
+    "neighborhood": "Vasanth Nagar",
+    "address": "7/1 Edward Road, Off Queens Road, Bengaluru 560052",
+    "website": "https://champaca.in/",
+    "mapsUrl": "https://maps.google.com/?q=Champaca+Bookstore+Edward+Road",
+    "seating": "Indoor quiet bookstore cafe; reading nooks; stairs only (no elevator)",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "cappuccino",
+      "coffee & tea",
+      "light cafe fare"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown",
+    "priceRange": "₹₹",
+    "tags": [
+      "bookstore cafe",
+      "quiet",
+      "women-run",
+      "reading",
+      "community"
+    ],
+    "description": "Independently women-run bookstore with a supporting cafe — ideal for a quiet cappuccino and browsing.",
+    "confidenceNotes": "Address/hours high from official. Coffee programme secondary; wifi unknown.",
+    "sources": [
+      "https://champaca.in/pages/contact-us",
+      "https://elledecor.in/best-coffee-cafes-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "champaca-indiranagar",
+    "name": "Champaca Bookstore Café (Indiranagar)",
+    "neighborhood": "Indiranagar",
+    "address": "594 A, 9th Main Road, Hoysala Nagar, Indiranagar, Bengaluru 560039",
+    "website": "https://champaca.in/",
+    "mapsUrl": "https://maps.google.com/?q=Champaca+Bookstore+Indiranagar",
+    "seating": "Indoor bookstore cafe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "coffee & tea",
+      "light cafe"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown",
+    "priceRange": "₹₹",
+    "tags": [
+      "bookstore cafe",
+      "quiet",
+      "reading"
+    ],
+    "description": "Champaca's Indiranagar bookstore-cafe for a quieter coffee-and-books break.",
+    "confidenceNotes": "Address high from official. Facility facts unknown.",
+    "sources": [
+      "https://champaca.in/pages/contact-us"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "cafe-stone-cinnamon",
+    "name": "Café Stone at CINNAMON",
+    "neighborhood": "Ulsoor / Rukmani Colony",
+    "address": "CINNAMON, Rukmani Colony (restored bungalow courtyard), Bengaluru — verify exact pin on Maps",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Cafe+Stone+Cinnamon+Bangalore",
+    "seating": "Outdoor/courtyard seating in restored bungalow; pet-friendly; artsy boutique setting",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "specialty latte",
+      "smoothie bowls",
+      "cafe fare"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown",
+    "priceRange": "₹₹–₹₹₹",
+    "tags": [
+      "design cafe",
+      "pet-friendly",
+      "courtyard",
+      "boutique",
+      "brunch"
+    ],
+    "description": "Courtyard cafe inside the CINNAMON design store bungalow — classical columns, curated wares, pet-friendly.",
+    "confidenceNotes": "Concept high from Elle Decor. Exact street address not fully pinned — verify. Coffee sourcing unknown.",
+    "sources": [
+      "https://elledecor.in/best-coffee-cafes-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "gully-coffee-koramangala",
+    "name": "Gully Coffee Roasters",
+    "neighborhood": "Koramangala",
+    "address": "28, Ground Floor, KHB Colony, 4th/B Cross, Koramangala 5th Block, Bengaluru",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Gully+Coffee+Roasters+Koramangala",
+    "seating": "Indoor no-fuss minimal space with plants; casual hangout",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "cortado",
+      "cappuccino",
+      "bulletproof coffee",
+      "cafe coffee",
+      "burgers/pizzas"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown (roaster-named; specific farms not verified)",
+    "priceRange": "₹₹",
+    "tags": [
+      "cafe",
+      "casual",
+      "roasters",
+      "hangout"
+    ],
+    "description": "Cheeky minimal Koramangala cafe-roaster serving classics and comfort food in a plant-filled room.",
+    "confidenceNotes": "Address from Curly Tales. Sourcing/wifi unknown.",
+    "sources": [
+      "https://curlytales.com/8-best-coffee-shops-in-bengaluru-for-speciality-brews-handcrafted-bites-stellar-vibes/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "kreme-kultura-kammanahalli",
+    "name": "Krème Kultura",
+    "neighborhood": "Kammanahalli / HRBR",
+    "address": "No 318, 1st B Cross Road, HRBR 3rd Block, St Thomas Town, Kammanahalli, Bengaluru 560084",
+    "website": "https://kremekultura.com/",
+    "mapsUrl": "https://maps.google.com/?q=Kreme+Kultura+Kammanahalli",
+    "seating": "Indoor creative workspace cafe; day-pass option; designed for day-long stays",
+    "wifi": "yes",
+    "charging": "yes",
+    "coffeeMenu": [
+      "espresso (CIME Saturno)",
+      "pour-over / V60 / Chemex / AeroPress",
+      "cold brew / nitro",
+      "all-day brunch",
+      "European pastries"
+    ],
+    "beansSold": [
+      "single-origin Arabica retail (brand programme)"
+    ],
+    "sourcing": "100% Arabica single origins from global regions (Ethiopia, Kenya, Colombia, Guatemala cited); third-wave; first CIME Saturno in India (brand claim)",
+    "priceRange": "₹₹–₹₹₹",
+    "tags": [
+      "specialty coffee",
+      "work-friendly",
+      "wifi",
+      "charging",
+      "day pass",
+      "pastry",
+      "third wave"
+    ],
+    "description": "Kammanahalli third-wave cafe as creative workspace: 400 Mbps Wi-Fi, outlets at every table, pour-overs, and CIME Saturno espresso with European bakes.",
+    "confidenceNotes": "Wifi (400 Mbps) and outlets at every table explicitly on official site — high. Phone on site looks placeholder; verify independently.",
+    "sources": [
+      "https://kremekultura.com/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "hustle-hsr",
+    "name": "Hustle (Cafe Hustle)",
+    "neighborhood": "HSR Layout",
+    "address": "188/A, 22nd Cross Road, 3rd Sector, HSR Layout, Bengaluru 560102",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=Hustle+Cafe+HSR+Bangalore",
+    "seating": "Indoor/outdoor; designed for eating, working, and relaxing",
+    "wifi": "yes",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "cafe coffee",
+      "cafe food",
+      "casual dining"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown",
+    "priceRange": "₹₹",
+    "tags": [
+      "work-friendly",
+      "wifi",
+      "casual",
+      "outdoor"
+    ],
+    "description": "Popular HSR casual cafe for work-and-hang sessions with Wi-Fi and outdoor seating — lifestyle cafe more than specialty roaster.",
+    "confidenceNotes": "Wifi mentioned in secondary directories — medium. Sourcing unknown.",
+    "sources": [
+      "https://www.zomato.com/bangalore/hustle-hsr-bangalore",
+      "https://yappe.in/karnataka/bengaluru/cafe-hustle/2148294"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "matteo-coffea-church-street",
+    "name": "Matteo Coffea",
+    "neighborhood": "Church Street",
+    "address": "No. 2, Church Street, Bengaluru 560001",
+    "website": "http://www.matteocoffea.com/contact.html",
+    "mapsUrl": "https://maps.google.com/?q=Matteo+Coffea+Church+Street",
+    "seating": "Indoor iconic Church Street cafe; often busy",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "cappuccino",
+      "latte",
+      "cafe classics",
+      "cafe food"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown",
+    "priceRange": "₹₹",
+    "tags": [
+      "iconic",
+      "Church Street",
+      "classic cafe",
+      "hangout"
+    ],
+    "description": "Long-running Church Street institution for classic cafe coffee and casual meals — iconic more than third-wave.",
+    "confidenceNotes": "Address high. Specialty sourcing not claimed — unknown.",
+    "sources": [
+      "http://www.matteocoffea.com/contact.html",
+      "https://www.zomato.com/bangalore/matteo-coffea-church-street"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "flying-squirrel-brigade-road",
+    "name": "The Flying Squirrel",
+    "neighborhood": "Brigade Road",
+    "address": "57, Samsung Opera House, Brigade Road, Bengaluru 560025",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=The+Flying+Squirrel+Brigade+Road+Bangalore",
+    "seating": "Indoor and outdoor seating",
+    "wifi": "yes",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "coffee",
+      "desserts",
+      "shakes",
+      "cafe food"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown",
+    "priceRange": "₹₹",
+    "tags": [
+      "wifi",
+      "outdoor",
+      "casual cafe",
+      "central Bangalore"
+    ],
+    "description": "Central Brigade Road cafe with Wi-Fi and indoor/outdoor seating — convenient CBD stop rather than specialty destination.",
+    "confidenceNotes": "Wifi listed on Justdial amenities — medium. Sourcing unknown.",
+    "sources": [
+      "https://www.justdial.com/Bangalore/The-Flying-Squirrel-Brigade-Road/080PXX80-XX80-181017171256-D2V8_BZDET"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "roastery-coffee-house-kalyan-nagar",
+    "name": "Roastery Coffee House (Kalyan Nagar)",
+    "neighborhood": "Kalyan Nagar",
+    "address": "Kalyan Nagar, Bengaluru (verify exact unit on Maps / roasterycoffee.co.in)",
+    "website": "https://roasterycoffee.co.in/",
+    "mapsUrl": "https://maps.google.com/?q=Roastery+Coffee+House+Kalyan+Nagar+Bangalore",
+    "seating": "Indoor modern Indian-inspired cafe; calm laptop-friendly reputation",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "specialty espresso drinks",
+      "signature coffees",
+      "comfort food",
+      "retail scored beans"
+    ],
+    "beansSold": [
+      "in-house roasted specialty beans (retail nationwide)"
+    ],
+    "sourcing": "In-house roasting; Indian specialty focus; brand originated Hyderabad",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "in-house roastery",
+      "work-friendly",
+      "retail beans",
+      "chain"
+    ],
+    "description": "Bengaluru outpost of Roastery Coffee House — modern Indian specialty cafe with in-house roasted beans and a calm work vibe.",
+    "confidenceNotes": "Brand programme high from official site. Exact Kalyan Nagar pin medium — verify.",
+    "sources": [
+      "https://roasterycoffee.co.in/",
+      "https://laptopfriendlycafe.com/cafes/bengaluru/the-roastery"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "third-wave-coffee-brand",
+    "name": "Third Wave Coffee (Brand — Bengaluru flagships)",
+    "neighborhood": "Multiple (Church Street, Lavelle Road, Indiranagar, HSR, Malleshwaram, New BEL Road, etc.)",
+    "address": "Multiple Bengaluru outlets — flagships include Church Street, Lavelle Road, Indiranagar 12th Main, Malleshwaram Margosa Rd, HSR, New BEL Road",
+    "website": "https://www.thirdwavecoffee.in/",
+    "mapsUrl": "https://maps.google.com/?q=Third+Wave+Coffee+Bangalore",
+    "seating": "Generally indoor multi-level cafes; many outlets work-friendly",
+    "wifi": "yes",
+    "charging": "yes",
+    "coffeeMenu": [
+      "espresso drinks",
+      "pour-over",
+      "cold brew",
+      "frappe / specialty drinks",
+      "bakery",
+      "cafe food"
+    ],
+    "beansSold": [
+      "Third Wave retail bags",
+      "blends & origins"
+    ],
+    "sourcing": "Handpicked Indian producers; roasted by Third Wave",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee chain",
+      "work-friendly",
+      "wifi",
+      "charging",
+      "consistent",
+      "iconic"
+    ],
+    "description": "India's most ubiquitous specialty chain in Bengaluru — reliable espresso and cold brew, with several locations praised for free Wi-Fi, charging, and laptop work.",
+    "confidenceNotes": "Wifi + charging confirmed for Indiranagar 12th Main; other outlets often similar but not individually verified.",
+    "sources": [
+      "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-church-street-bengaluru/",
+      "https://awifiplace.com/cafes/third-wave-coffee-bengaluru-9"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "third-wave-indiranagar-12th-main",
+    "name": "Third Wave Coffee (Indiranagar 12th Main)",
+    "neighborhood": "Indiranagar",
+    "address": "12th Main Rd, HAL 2nd Stage, Appareddipalya, Indiranagar, Bengaluru",
+    "website": "https://www.thirdwavecoffee.in/",
+    "mapsUrl": "https://maps.google.com/?q=Third+Wave+Coffee+12th+Main+Indiranagar",
+    "seating": "Indoor calm laptop seating; popular for client meets and remote work",
+    "wifi": "yes",
+    "charging": "yes",
+    "coffeeMenu": [
+      "espresso drinks",
+      "cold brew",
+      "cafe food"
+    ],
+    "beansSold": [
+      "Third Wave retail"
+    ],
+    "sourcing": "Third Wave Indian producer programme",
+    "priceRange": "₹₹",
+    "tags": [
+      "work-friendly",
+      "wifi",
+      "charging",
+      "specialty coffee chain"
+    ],
+    "description": "Often-cited work cafe on Indiranagar 12th Main with free guest Wi-Fi and laptop charging sockets.",
+    "confidenceNotes": "Wifi and charging from multiple awifiplace reviews — medium-high; some note inconsistent wifi speed.",
+    "sources": [
+      "https://awifiplace.com/cafes/third-wave-coffee-bengaluru-9"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "third-wave-church-street",
+    "name": "Third Wave Coffee (Church Street)",
+    "neighborhood": "Church Street",
+    "address": "Shop 52/2, Sujaya Pride Building, Church St, Ashok Nagar, Bengaluru 560001",
+    "website": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-church-street-bengaluru/",
+    "mapsUrl": "https://maps.google.com/?q=Third+Wave+Coffee+Church+Street+Bangalore",
+    "seating": "Indoor multi-level but somewhat cramped; peaceful enough for reading/writing",
+    "wifi": "yes",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso",
+      "pour-over",
+      "cold brew",
+      "sandwiches",
+      "bakery"
+    ],
+    "beansSold": [
+      "Third Wave retail"
+    ],
+    "sourcing": "Third Wave Indian producer programme",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee chain",
+      "wifi",
+      "Church Street",
+      "work-friendly"
+    ],
+    "description": "Church Street Third Wave with free Wi-Fi and a quieter upper vibe for light work.",
+    "confidenceNotes": "Free Wi-Fi mentioned in store-page reviews — medium. Charging unknown.",
+    "sources": [
+      "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-church-street-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "third-wave-lavelle-road",
+    "name": "Third Wave Coffee (Lavelle Road)",
+    "neighborhood": "Lavelle Road",
+    "address": "Corporation No 13, Old no 4/1, Ground Floor, Lavelle Road Junction, Walton, Bengaluru 560001",
+    "website": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-lavelle-road-bengaluru/",
+    "mapsUrl": "https://maps.google.com/?q=Third+Wave+Coffee+Lavelle+Road",
+    "seating": "Indoor cosy corners with couches and books upstairs",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso drinks",
+      "bakery",
+      "cafe food"
+    ],
+    "beansSold": [
+      "Third Wave retail"
+    ],
+    "sourcing": "Third Wave Indian producer programme",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee chain",
+      "work-friendly",
+      "cosy",
+      "central Bangalore"
+    ],
+    "description": "Lavelle Road Third Wave praised for couches, bookshelves, and consistency — central spot for work or catch-ups.",
+    "confidenceNotes": "Work-friendly vibe from reviews; wifi/charging not explicitly confirmed for this outlet.",
+    "sources": [
+      "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-lavelle-road-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "third-wave-malleshwaram",
+    "name": "Third Wave Coffee (Malleshwaram)",
+    "neighborhood": "Malleshwaram",
+    "address": "57, Margosa Rd, Spearhead Towers, Malleswaram, Bengaluru 560003",
+    "website": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-malleshwaram-bengaluru/",
+    "mapsUrl": "https://maps.google.com/?q=Third+Wave+Coffee+Malleshwaram",
+    "seating": "Indoor chill/calm cafe seating",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "cold brew",
+      "americano",
+      "caramel macchiato",
+      "breakfast / bakery"
+    ],
+    "beansSold": [
+      "Third Wave retail"
+    ],
+    "sourcing": "Third Wave Indian producer programme",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee chain",
+      "north Bangalore",
+      "neighborhood"
+    ],
+    "description": "Malleshwaram Third Wave on Margosa Road — reliable specialty coffee for north Bangalore.",
+    "confidenceNotes": "Address high from store page. Wifi unknown.",
+    "sources": [
+      "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-malleshwaram-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "blue-tokai-brand",
+    "name": "Blue Tokai Coffee Roasters (Brand — Bengaluru)",
+    "neighborhood": "Multiple (Koramangala, Domlur/Indiranagar, HSR, Whitefield, Jayanagar, etc.)",
+    "address": "Multiple Bengaluru cafes — notable: Koramangala 8th Block; Domlur Defence Colony; HSR; Whitefield VR Bengaluru",
+    "website": "https://bluetokaicoffee.com/",
+    "mapsUrl": "https://stores.bluetokaicoffee.com/?city=All&locality=All&location=Karnataka",
+    "seating": "Generally indoor cozy cafe seating; many outlets work-break friendly",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso drinks",
+      "pour-over",
+      "cold brew",
+      "Vietnamese cold coffee",
+      "bakery / sourdough",
+      "retail beans & gear"
+    ],
+    "beansSold": [
+      "single origins",
+      "signature blends",
+      "homebrew kits"
+    ],
+    "sourcing": "Direct-sourced Indian Arabica farms; hand-roasted; national specialty brand",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee chain",
+      "retail beans",
+      "pour-over",
+      "iconic",
+      "transparent sourcing"
+    ],
+    "description": "Premier specialty chain with many Bengaluru cafes — transparent Indian farm sourcing, pour-overs, cold brew, and retail beans.",
+    "confidenceNotes": "Brand sourcing high. Per-outlet wifi/charging not verified — left unknown at brand level.",
+    "sources": [
+      "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-koramangala-cafe-koramangala-bengaluru-436794/Home",
+      "https://bluetokaicoffee.com/"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "blue-tokai-koramangala",
+    "name": "Blue Tokai Coffee Roasters (Koramangala)",
+    "neighborhood": "Koramangala",
+    "address": "No 583, 8th Block, 20th Main Road, Koramangala, Bengaluru 560095",
+    "website": "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-koramangala-cafe-koramangala-bengaluru-436794/Home",
+    "mapsUrl": "https://maps.google.com/?q=Blue+Tokai+Koramangala+20th+Main",
+    "seating": "Indoor specialty cafe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso",
+      "pour-over",
+      "cold brew",
+      "Vietnamese style",
+      "bakery"
+    ],
+    "beansSold": [
+      "Blue Tokai single origins & blends"
+    ],
+    "sourcing": "Direct Indian farm Arabica; Blue Tokai roast",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "retail beans",
+      "chain"
+    ],
+    "description": "Koramangala Blue Tokai cafe for pour-overs, espresso, and take-home single-origin bags.",
+    "confidenceNotes": "Address high from official store page. Wifi unknown.",
+    "sources": [
+      "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-koramangala-cafe-koramangala-bengaluru-436794/Home"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "blue-tokai-domlur",
+    "name": "Blue Tokai Coffee Roasters (Domlur / Indiranagar)",
+    "neighborhood": "Domlur / Indiranagar",
+    "address": "No 24, 1st Main, 3rd Cross Road, Defence Colony, Domlur, Indiranagar, Bengaluru 560008",
+    "website": "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-indiranagar-domlur-cafe-indiranagar-bengaluru-436797/Home",
+    "mapsUrl": "https://maps.google.com/?q=Blue+Tokai+Domlur+Defence+Colony",
+    "seating": "Indoor cozy cafe",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "hot & cold coffees",
+      "pour-over",
+      "bakery",
+      "salads & sandwiches",
+      "retail beans & accessories"
+    ],
+    "beansSold": [
+      "signature blends",
+      "single origins",
+      "brew gear"
+    ],
+    "sourcing": "Direct Indian farm Arabica; Blue Tokai roast",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "retail beans",
+      "brunch"
+    ],
+    "description": "Domlur Defence Colony Blue Tokai — cozy specialty cafe with pour-overs, bakery, and retail beans near Indiranagar.",
+    "confidenceNotes": "Address high from official. Wifi unknown.",
+    "sources": [
+      "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-indiranagar-domlur-cafe-indiranagar-bengaluru-436797/Home"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "blue-tokai-whitefield",
+    "name": "Blue Tokai Coffee Roasters (Whitefield / VR Bengaluru)",
+    "neighborhood": "Whitefield / Mahadevapura",
+    "address": "Shop No 8, UGF, VR Bengaluru, Devasandra Industrial Estate, Near ITPL Main Road, Mahadevapura, Bengaluru 560048",
+    "website": "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-whitefield-cafe-mahadevapura-bengaluru-447099/Home",
+    "mapsUrl": "https://maps.google.com/?q=Blue+Tokai+VR+Bengaluru",
+    "seating": "Indoor mall cafe seating",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso drinks",
+      "cold brew",
+      "pour-over",
+      "bakery"
+    ],
+    "beansSold": [
+      "Blue Tokai retail"
+    ],
+    "sourcing": "Direct Indian farm Arabica; Blue Tokai roast",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee",
+      "mall cafe",
+      "IT corridor"
+    ],
+    "description": "Blue Tokai inside VR Bengaluru — convenient specialty coffee stop for Whitefield/ITPL.",
+    "confidenceNotes": "Address high from official store page.",
+    "sources": [
+      "https://stores.bluetokaicoffee.com/blue-tokai-coffee-roasters-whitefield-cafe-mahadevapura-bengaluru-447099/Home"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "bloom-jayanagar",
+    "name": "The Bloom Cafe & Patisserie (Jayanagar)",
+    "neighborhood": "Jayanagar",
+    "address": "Jayanagar, Bengaluru (verify exact pin on District/Maps)",
+    "website": null,
+    "mapsUrl": "https://maps.google.com/?q=The+Bloom+Cafe+Patisserie+Jayanagar",
+    "seating": "Indoor cafe-patisserie",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "cafe coffee",
+      "patisserie",
+      "desserts"
+    ],
+    "beansSold": [],
+    "sourcing": "unknown",
+    "priceRange": "₹₹",
+    "tags": [
+      "patisserie",
+      "dessert",
+      "cafe"
+    ],
+    "description": "Jayanagar cafe-patisserie known for bakes and a polished dessert-forward cafe experience.",
+    "confidenceNotes": "Existence confirmed via District; exact address and coffee programme low detail — low-medium confidence.",
+    "sources": [
+      "https://www.district.in/dining/bangalore/the-bloom-cafe-patisserie-jayanagar-bangalore"
+    ],
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "third-wave-new-bel-road",
+    "name": "Third Wave Coffee (New BEL Road)",
+    "neighborhood": "New BEL Road / Sanjaynagar",
+    "address": "2, 10, 80 Feet Rd, Ashwath Nagar, Sanjaynagar, Bengaluru 560094",
+    "website": "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-new-bel-road-bengaluru/",
+    "mapsUrl": "https://maps.google.com/?q=Third+Wave+Coffee+New+BEL+Road",
+    "seating": "Indoor cafe good for work calls per reviews",
+    "wifi": "unknown",
+    "charging": "unknown",
+    "coffeeMenu": [
+      "espresso drinks",
+      "cafe food",
+      "specialty drinks"
+    ],
+    "beansSold": [
+      "Third Wave retail"
+    ],
+    "sourcing": "Third Wave Indian producer programme",
+    "priceRange": "₹₹",
+    "tags": [
+      "specialty coffee chain",
+      "work-friendly",
+      "north Bangalore"
+    ],
+    "description": "New BEL Road / Sanjaynagar Third Wave — north Bangalore staple praised for work-call ambience and consistent coffee.",
+    "confidenceNotes": "Address high from store page. Wifi not explicitly confirmed for this outlet.",
+    "sources": [
+      "https://stores.thirdwavecoffeeroasters.com/store-pages/third-wave-coffee-new-bel-road-bengaluru/"
+    ],
+    "lat": null,
+    "lng": null
+  }
+]
