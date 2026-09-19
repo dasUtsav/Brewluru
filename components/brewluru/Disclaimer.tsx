@@ -1,10 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { DISCLAIMER } from '@/data/cafes';
-import { colors, radius, spacing, typography } from '@/constants/theme';
+import { colors, spacing, typography } from '@/constants/theme';
 
-export function Disclaimer() {
+type Props = {
+  quiet?: boolean;
+};
+
+export function Disclaimer({ quiet = true }: Props) {
   return (
-    <View style={styles.box}>
+    <View style={quiet ? styles.quiet : styles.box}>
       <Text style={styles.text}>{DISCLAIMER}</Text>
     </View>
   );
@@ -13,13 +17,14 @@ export function Disclaimer() {
 const styles = StyleSheet.create({
   box: {
     backgroundColor: colors.bgMuted,
-    borderRadius: radius.md,
+    borderRadius: 8,
     padding: spacing.md,
-    borderWidth: 1,
-    borderColor: colors.border,
+  },
+  quiet: {
+    paddingVertical: spacing.sm,
   },
   text: {
     ...typography.caption,
-    color: colors.textSecondary,
+    color: colors.textMuted,
   },
 });

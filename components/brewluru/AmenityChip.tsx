@@ -6,40 +6,48 @@ type Props = {
   label: string;
   status: AmenityStatus;
   compact?: boolean;
+  /** List cards: skip unknown so empty amenity data does not add chips. */
+  hideUnknown?: boolean;
 };
 
-export function AmenityChip({ label, status, compact }: Props) {
+export function AmenityChip({ label, status, compact, hideUnknown }: Props) {
+  if (hideUnknown && status === 'unknown') return null;
+
   const tone =
     status === 'yes' ? styles.yes : status === 'no' ? styles.no : styles.unknown;
   const textTone =
     status === 'yes' ? styles.yesText : status === 'no' ? styles.noText : styles.unknownText;
-  const statusLabel = status === 'yes' ? 'Yes' : status === 'no' ? 'No' : 'Unknown';
+
+  const text =
+    status === 'yes'
+      ? label
+      : status === 'no'
+        ? `No ${label.toLowerCase()}`
+        : `${label}?`;
 
   return (
     <View style={[styles.chip, tone, compact && styles.compact]}>
-      <Text style={[styles.label, textTone]}>
-        {label}: {statusLabel}
-      </Text>
+      <Text style={[styles.label, textTone]}>{text}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   chip: {
-    paddingHorizontal: 10,
-    paddingVertical: 5,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
     borderRadius: radius.pill,
     alignSelf: 'flex-start',
   },
   compact: {
-    paddingHorizontal: 8,
-    paddingVertical: 3,
+    paddingHorizontal: 7,
+    paddingVertical: 2,
   },
   yes: { backgroundColor: colors.successSoft },
   no: { backgroundColor: colors.dangerSoft },
-  unknown: { backgroundColor: colors.warningSoft },
-  label: { ...typography.label },
+  unknown: { backgroundColor: colors.bgMuted },
+  label: { ...typography.label, letterSpacing: 0.2 },
   yesText: { color: colors.success },
   noText: { color: colors.danger },
-  unknownText: { color: colors.warning },
+  unknownText: { color: colors.textMuted },
 });

@@ -1,14 +1,8 @@
 import type { ReactNode } from 'react';
-import {
-  Linking,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import { Linking, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { AmenityChip } from '@/components/brewluru/AmenityChip';
+import { Collapsible } from '@/components/brewluru/Collapsible';
 import { Disclaimer } from '@/components/brewluru/Disclaimer';
 import { EmptyState } from '@/components/brewluru/EmptyState';
 import { TagChip } from '@/components/brewluru/TagChip';
@@ -24,14 +18,10 @@ export default function CafeDetailScreen() {
   const cafe = getCafeById(typeof id === 'string' ? id : id?.[0] ?? '');
   const router = useRouter();
 
-
   if (!cafe) {
     return (
       <View style={styles.missing}>
-        <EmptyState
-          title="Cafe not found"
-          message="That cafe id is not in the Brewluru dataset."
-        />
+        <EmptyState title="Cafe not found" message="That cafe id is not in the Brewluru dataset." />
         <Pressable onPress={() => router.back()} style={styles.backBtn}>
           <Text style={styles.backBtnText}>Go back</Text>
         </Pressable>
@@ -39,97 +29,95 @@ export default function CafeDetailScreen() {
     );
   }
 
+  const price = cafe.priceRange ? cafe.priceRange.split('(')[0].trim() : null;
+  const meta = [cafe.neighborhood, price].filter(Boolean).join('  ·  ');
+  const hasLinks = Boolean(cafe.mapsUrl || cafe.website);
+  const hasCoords = cafe.lat != null || cafe.lng != null;
+
   return (
     <>
       <Stack.Screen options={{ title: cafe.name }} />
       <ScrollView contentContainerStyle={styles.content}>
-        <Text style={styles.name}>{cafe.name}</Text>
-        <Text style={styles.neighborhood}>{cafe.neighborhood}</Text>
-        {cafe.priceRange ? <Text style={styles.price}>{cafe.priceRange}</Text> : null}
+        <View style={styles.hero}>
+          <Text style={styles.name}>{cafe.name}</Text>
+          <Text style={styles.meta}>{meta}</Text>
+        </View>
 
         <View style={styles.chips}>
-          <AmenityChip label="Wifi" status={cafe.wifi} />
-          <AmenityChip label="Charging" status={cafe.charging} />
+          <AmenityChip label="Wifi" status={cafe.wifi} compact />
+          <AmenityChip label="Charging" status={cafe.charging} compact />
         </View>
 
         <Text style={styles.body}>{cafe.description}</Text>
 
-        <Section title="Address">
-          <Text style={styles.body}>{cafe.address || '—'}</Text>
-        </Section>
-
-        <Section title="Links">
-          <View style={styles.linkRow}>
-            {cafe.mapsUrl ? (
-              <LinkButton label="Open in Maps" url={cafe.mapsUrl} />
-            ) : (
-              <Text style={styles.muted}>Maps link unavailable</Text>
-            )}
-            {cafe.website ? (
-              <LinkButton label="Website" url={cafe.website} />
-            ) : (
-              <Text style={styles.muted}>Website unknown</Text>
-            )}
-          </View>
-        </Section>
-
-        <Section title="Seating">
-          <Text style={styles.body}>{cafe.seating || '—'}</Text>
-        </Section>
-
-        <Section title="Coffee menu">
-          <BulletList items={cafe.coffeeMenu} empty="No menu details recorded." />
-        </Section>
-
-        <Section title="Beans sold">
-          <BulletList items={cafe.beansSold} empty="No retail bean details recorded." />
-        </Section>
-
-        <Section title="Sourcing">
-          <Text style={styles.body}>{cafe.sourcing || '—'}</Text>
-        </Section>
-
-        <Section title="Tags">
-          <View style={styles.tagWrap}>
-            {cafe.tags.length === 0 ? (
-              <Text style={styles.muted}>No tags</Text>
-            ) : (
-              cafe.tags.map((t) => <TagChip key={t} label={t} />)
-            )}
-          </View>
-        </Section>
-
-        {(cafe.lat != null || cafe.lng != null) && (
-          <Section title="Coordinates">
-            <Text style={styles.body}>
-              {cafe.lat ?? '—'}, {cafe.lng ?? '—'}
-            </Text>
-          </Section>
-        )}
-
-        {cafe.lat == null && cafe.lng == null ? (
-          <Section title="Coordinates">
-            <Text style={styles.muted}>Not verified — use Maps link for navigation.</Text>
+        {cafe.address || hasLinks ? (
+          <Section title="Address">
+            {cafe.address ? <Text style={styles.body}>{cafe.address}</Text> : null}
+            {hasLinks ? (
+              <View style={styles.linkRow}>
+                {cafe.mapsUrl ? <LinkButton label="Maps" url={cafe.mapsUrl} /> : null}
+                {cafe.website ? <LinkButton label="Website" url={cafe.website} /> : null}
+              </View>
+            ) : null}
           </Section>
         ) : null}
 
-        <Section title="Confidence notes">
-          <Text style={styles.body}>{cafe.confidenceNotes || '—'}</Text>
-        </Section>
+        {cafe.seating ? (
+          <Section title="Seating">
+            <Text style={styles.body}>{cafe.seating}</Text>
+          </Section>
+        ) : null}
 
-        <Section title="Sources">
-          {cafe.sources.length === 0 ? (
-            <Text style={styles.muted}>No sources listed</Text>
-          ) : (
-            cafe.sources.map((url) => (
-              <Pressable key={url} onPress={() => Linking.openURL(url)} style={styles.source}>
-                <Text style={styles.linkText}>{url}</Text>
-              </Pressable>
-            ))
-          )}
-        </Section>
+        {cafe.coffeeMenu.length > 0 ? (
+          <Section title="Coffee">
+            <View style={styles.chipWrap}>
+              {cafe.coffeeMenu.map((item) => (
+                <TagChip key={item} label={item} compact />
+              ))}
+            </View>
+          </Section>
+        ) : null}
 
-        <Disclaimer />
+        {cafe.beansSold.length > 0 ? (
+          <Section title="Beans">
+            <View style={styles.chipWrap}>
+              {cafe.beansSold.map((item) => (
+                <TagChip key={item} label={item} compact />
+              ))}
+            </View>
+          </Section>
+        ) : null}
+
+        {cafe.sourcing ? (
+          <Section title="Sourcing">
+            <Text style={styles.body}>{cafe.sourcing}</Text>
+          </Section>
+        ) : null}
+
+        {cafe.tags.length > 0 ? (
+          <View style={styles.chipWrap}>
+            {cafe.tags.map((t) => (
+              <TagChip key={t} label={t} compact />
+            ))}
+          </View>
+        ) : null}
+
+        <Collapsible title="Notes & sources">
+          {cafe.confidenceNotes ? <Text style={styles.body}>{cafe.confidenceNotes}</Text> : null}
+          {hasCoords ? (
+            <Text style={styles.muted}>
+              {cafe.lat ?? '—'}, {cafe.lng ?? '—'}
+            </Text>
+          ) : null}
+          {cafe.sources.length > 0
+            ? cafe.sources.map((url) => (
+                <Pressable key={url} onPress={() => Linking.openURL(url)} style={styles.source}>
+                  <Text style={styles.linkText}>{url}</Text>
+                </Pressable>
+              ))
+            : null}
+          <Disclaimer />
+        </Collapsible>
       </ScrollView>
     </>
   );
@@ -140,19 +128,6 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
     <View style={styles.section}>
       <Text style={styles.sectionTitle}>{title}</Text>
       {children}
-    </View>
-  );
-}
-
-function BulletList({ items, empty }: { items: string[]; empty: string }) {
-  if (!items.length) return <Text style={styles.muted}>{empty}</Text>;
-  return (
-    <View style={styles.bullets}>
-      {items.map((item) => (
-        <Text key={item} style={styles.bullet}>
-          • {item}
-        </Text>
-      ))}
     </View>
   );
 }
@@ -171,9 +146,10 @@ function LinkButton({ label, url }: { label: string; url: string }) {
 
 const styles = StyleSheet.create({
   content: {
-    padding: spacing.lg,
+    paddingHorizontal: spacing.lg,
+    paddingTop: spacing.md,
     paddingBottom: spacing.xxl,
-    maxWidth: 800,
+    maxWidth: 720,
     width: '100%',
     alignSelf: 'center',
     gap: spacing.md,
@@ -188,39 +164,31 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
   },
   backBtnText: { color: colors.chipActiveText, fontWeight: '600' },
+  hero: { gap: 4 },
   name: { ...typography.hero, color: colors.text },
-  neighborhood: {
+  meta: {
     ...typography.caption,
     color: colors.textMuted,
-    fontWeight: '700',
-    textTransform: 'uppercase',
-    letterSpacing: 0.5,
-    marginTop: -4,
+    fontWeight: '600',
   },
-  price: { ...typography.subtitle, color: colors.accent },
   chips: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
   body: { ...typography.body, color: colors.textSecondary },
-  muted: { ...typography.body, color: colors.textMuted },
-  section: { gap: spacing.sm },
+  muted: { ...typography.caption, color: colors.textMuted },
+  section: { gap: 6 },
   sectionTitle: {
     ...typography.label,
-    color: colors.text,
+    color: colors.textMuted,
     textTransform: 'uppercase',
-    letterSpacing: 0.5,
   },
-  linkRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
+  linkRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm, marginTop: 4 },
   linkBtn: {
     backgroundColor: colors.accentSoft,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.sm,
+    paddingHorizontal: spacing.md,
+    paddingVertical: 6,
     borderRadius: radius.pill,
-    borderWidth: 1,
-    borderColor: colors.border,
   },
   linkBtnText: { ...typography.label, color: colors.accentStrong },
-  tagWrap: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm },
-  bullets: { gap: 4 },
-  bullet: { ...typography.body, color: colors.textSecondary },
-  source: { paddingVertical: 4 },
+  chipWrap: { flexDirection: 'row', flexWrap: 'wrap', gap: 6 },
+  source: { paddingVertical: 2 },
   linkText: { ...typography.caption, color: colors.link },
 });

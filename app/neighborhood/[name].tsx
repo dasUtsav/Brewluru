@@ -30,9 +30,8 @@ export default function NeighborhoodScreen() {
         contentContainerStyle={styles.content}
         ListHeaderComponent={
           <View style={styles.header}>
-            <Text style={styles.title}>{neighborhood}</Text>
             <Text style={styles.subtitle}>
-              {list.length} cafe{list.length === 1 ? '' : 's'} in this area
+              {list.length} cafe{list.length === 1 ? '' : 's'}
             </Text>
           </View>
         }
@@ -62,9 +61,8 @@ const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
   },
-  header: { marginBottom: spacing.lg, gap: spacing.xs },
-  title: { ...typography.title, color: colors.text },
-  subtitle: { ...typography.body, color: colors.textSecondary },
-  cardWrap: { marginBottom: spacing.md },
+  header: { marginBottom: spacing.md },
+  subtitle: { ...typography.caption, color: colors.textSecondary },
+  cardWrap: { marginBottom: spacing.sm },
   footer: { marginTop: spacing.lg },
 });

@@ -36,10 +36,10 @@ export default function HomeScreen() {
       ListHeaderComponent={
         <View style={styles.header}>
           <Text style={styles.brand}>Brewluru</Text>
-          <Text style={styles.tagline}>Bangalore cafe guide — specialty & independents</Text>
+          <Text style={styles.tagline}>Specialty cafes in Bengaluru</Text>
           <FilterBar filters={filters} onChange={setFilters} />
           <Text style={styles.count}>
-            {results.length} of {cafes.length} cafes
+            {results.length} of {cafes.length}
           </Text>
         </View>
       }
@@ -65,18 +65,19 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   content: {
-    padding: spacing.lg,
+    paddingHorizontal: spacing.lg,
+    paddingTop: spacing.md,
     paddingBottom: spacing.xxl,
     maxWidth: 1200,
     width: '100%',
     alignSelf: 'center',
   },
-  header: { gap: spacing.md, marginBottom: spacing.md },
+  header: { gap: spacing.sm, marginBottom: spacing.md },
   brand: { ...typography.hero, color: colors.accentStrong },
-  tagline: { ...typography.body, color: colors.textSecondary, marginTop: -4 },
-  count: { ...typography.caption, color: colors.textMuted, fontWeight: '600' },
-  row: { gap: spacing.md },
-  cardWrap: { marginBottom: spacing.md },
+  tagline: { ...typography.caption, color: colors.textSecondary, marginTop: -4 },
+  count: { ...typography.caption, color: colors.textMuted },
+  row: { gap: spacing.sm },
+  cardWrap: { marginBottom: spacing.sm },
   cardWrapMulti: { flex: 1 },
-  footer: { marginTop: spacing.lg },
+  footer: { marginTop: spacing.md },
 });

@@ -13,12 +13,7 @@ export default function NeighborhoodsScreen() {
       keyExtractor={(item) => item.name}
       contentContainerStyle={styles.content}
       ListHeaderComponent={
-        <View style={styles.header}>
-          <Text style={styles.title}>Browse by neighborhood</Text>
-          <Text style={styles.subtitle}>
-            {stats.length} areas in this curated Bengaluru set
-          </Text>
-        </View>
+        <Text style={styles.lede}>{stats.length} areas in this curated set</Text>
       }
       ListFooterComponent={
         <View style={styles.footer}>
@@ -31,13 +26,10 @@ export default function NeighborhoodsScreen() {
           asChild
         >
           <Pressable style={({ pressed }) => [styles.row, pressed && styles.pressed]}>
-            <View style={styles.rowText}>
-              <Text style={styles.name}>{item.name}</Text>
-              <Text style={styles.count}>
-                {item.count} cafe{item.count === 1 ? '' : 's'}
-              </Text>
-            </View>
-            <Text style={styles.chevron}>›</Text>
+            <Text style={styles.name}>{item.name}</Text>
+            <Text style={styles.count}>
+              {item.count}
+            </Text>
           </Pressable>
         </Link>
       )}
@@ -47,31 +39,33 @@ export default function NeighborhoodsScreen() {
 
 const styles = StyleSheet.create({
   content: {
-    padding: spacing.lg,
+    paddingHorizontal: spacing.lg,
+    paddingTop: spacing.md,
     paddingBottom: spacing.xxl,
     maxWidth: 800,
     width: '100%',
     alignSelf: 'center',
-    gap: spacing.sm,
   },
-  header: { marginBottom: spacing.md, gap: spacing.xs },
-  title: { ...typography.title, color: colors.text },
-  subtitle: { ...typography.body, color: colors.textSecondary },
+  lede: {
+    ...typography.caption,
+    color: colors.textSecondary,
+    marginBottom: spacing.md,
+  },
   row: {
     backgroundColor: colors.bgElevated,
     borderRadius: radius.md,
-    padding: spacing.lg,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.md,
     borderWidth: 1,
     borderColor: colors.border,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     marginBottom: spacing.sm,
+    gap: spacing.md,
   },
   pressed: { opacity: 0.9 },
-  rowText: { flex: 1, gap: 2, paddingRight: spacing.md },
-  name: { ...typography.subtitle, color: colors.text },
-  count: { ...typography.caption, color: colors.textMuted },
-  chevron: { fontSize: 24, color: colors.textMuted, fontWeight: '300' },
-  footer: { marginTop: spacing.lg },
+  name: { ...typography.subtitle, color: colors.text, flex: 1 },
+  count: { ...typography.caption, color: colors.textMuted, fontWeight: '600' },
+  footer: { marginTop: spacing.md },
 });
